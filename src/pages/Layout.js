@@ -8,16 +8,16 @@ const Layout = () => {
       <div className="content-box text-center primary-bg">
         <img src="/bannister-web-services-logo.png" alt="logo" width="200px" className="logo"/>
       </div>
-      <Navbar expand="sm" className="justify-content-center primary-bg bold" sticky="top">
-        <Nav>
+      <Navbar className="justify-content-center primary-bg bold" sticky="top">
+        <Nav variant="underline">
           <Nav.Item>
             <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/blogs">About</Nav.Link>
+            <Nav.Link href="/blogs">About/CV</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/contact">Enquire</Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar>
