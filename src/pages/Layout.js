@@ -14,10 +14,10 @@ const Layout = () => {
             <Nav.Link href="/">Home</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/blogs">About/CV</Nav.Link>
+            <Nav.Link href="/portfolio">Portfolio</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/contact">Enquire</Nav.Link>
+            <Nav.Link href="/about">About me</Nav.Link>
           </Nav.Item>
         </Nav>
       </Navbar>
