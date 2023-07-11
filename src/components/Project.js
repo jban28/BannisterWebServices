@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card"
 import Nav from "react-bootstrap/Nav"
+import Button from "react-bootstrap/Button"
 import { useState } from "react";
 
 const Project = (props) => {
@@ -7,28 +8,29 @@ const Project = (props) => {
 
   return (
     <>
-      <Card className="content">
-        <Card.Img variant="top" src={props.data.imageFile}></Card.Img>
-        <Card.Title>{props.data.title}</Card.Title>
+      <Card>
+        <a href={props.data.link}><Card.Img variant="top" src={"/portfolio-images"+props.data.imageFile} alt={props.data.title}></Card.Img>
+        <Card.Title>{props.data.title}</Card.Title></a>
         <Card.Subtitle>{props.data.subtitle}</Card.Subtitle>
         <Nav variant="tabs" className="justify-content-center" defaultActiveKey="#first">
-            <Nav.Item>
-              <div className="nav-link selector" onClick={() => setSection("description")}>Description</div>
-            </Nav.Item>
-            <Nav.Item>
-              <div className="nav-link selector" onClick={() => setSection("technical")}>Technical Details</div>
-            </Nav.Item>
-          </Nav>
-          {(section === "description") &&
-            <ul>
-              {props.data.description.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          }
-          {(section === "technical") &&
-            <ul>
-              {props.data.technical.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          }
+          <Nav.Item>
+            <Nav.Link as="div" active={section === "description"} className="bg-theme" onClick={() => setSection("description")}>Description</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as="div" active={section === "technical"} className="bg-theme" onClick={() => setSection("technical")}>Technical Details</Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <Card.Body>
+          <Card.Text>
+            {(section === "description") && <p>{props.data.description}</p>}
+            {(section === "technical") &&
+              <ul>
+                {props.data.technical.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            }
+          </Card.Text>
+          {(section === "technical") && <Button href={props.data.git}><img height="26px" width="26px" className="git-icon" src="/github-mark-white.svg" alt="git"/>View source on github</Button>}
+        </Card.Body>
       </Card>
     </>
   )
