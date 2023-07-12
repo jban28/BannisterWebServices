@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 
 const Layout = () => {
   const [page, setPage] = useState(useLocation().pathname);
-  console.log(useLocation())
 
   return (
     <>

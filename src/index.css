@@ -12,6 +12,17 @@ body {
   text-align: center;
 }
 
+form {
+  margin-top: 24px;
+}
+
+.form-group {
+  text-align: left;
+  margin: auto;
+  max-width: 500px;
+  padding: 0px 12px;
+}
+
 ul {
   text-align: left;
 }
@@ -48,7 +59,7 @@ div.nav-link:hover {
 }
 
 .navbar {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .navbar-nav {
@@ -95,6 +106,10 @@ a.nav-link {
   position: sticky;
   top: 58px;
   z-index: 1000
+}
+
+.form-group {
+  margin-bottom: 24px;
 }
 
 #root {

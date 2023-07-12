@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -17,6 +18,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="about" element={<About />} />
+          <Route path="enquiries" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
