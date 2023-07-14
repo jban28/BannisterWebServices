@@ -16,7 +16,7 @@ application = Flask(__name__)
 
 CORS(application)
 
-@application.route("/", methods=["POST"])
+@application.route("/contact-form", methods=["POST"])
 def contact_form ():
     try:
         name = request.form["name"]
@@ -28,10 +28,10 @@ def contact_form ():
     
     try:
         ses_client.send_email(
-            Source='enquiries@bannisterwebservices.co.uk',
+            Source='noreply@bannisterwebservices.co.uk',
             Destination={
                 'ToAddresses': [
-                    'jd.bannister28@gmail.com',
+                    'james@bannisterwebservices.co.uk',
                 ]
             },
             Message={
@@ -64,10 +64,10 @@ Subject: \"{subject}\"
 Message: \"{message}\"
 """
         ses_client.send_email(
-            Source='enquiries@bannisterwebservices.co.uk',
+            Source='noreply@bannisterwebservices.co.uk',
             Destination={
                 'ToAddresses': [
-                    'jd.bannister28@gmail.com',
+                    email,
                 ]
             },
             Message={
@@ -81,14 +81,10 @@ Message: \"{message}\"
                         'Charset': 'utf-8'
                     }
                 }
-            },
-            ReplyToAddresses=[
-                email,
-            ],
+            }
         )
     finally:
         return "sent", 200
 
 if __name__ == "__main__":
-    application.config["DEBUG"] = True
     application.run()
