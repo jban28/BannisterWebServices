@@ -9,7 +9,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/", {
+    fetch("https://enquiries.bannisterwebservices.co.uk/contact-form", {
       method: "POST",
       body: new FormData(e.target)
     }).then().then(setSubmitted(true))
