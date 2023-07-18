@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 
 const About = () => {
-  let employment = [
+  const experience = [
     {
       title: "Developer",
       organisation: "Bannister Web Services",
@@ -15,6 +15,17 @@ const About = () => {
         "Used AWS services including Elastic Beanstalk, Amplify, Route 53, S3 and EC2",
         "Used Git and GitHub for version control",
         "Used VS Code and WSL to write programs"
+      ]
+    },
+    {
+      title: "Event Organiser",
+      organisation: "Manchester 24 Hour Run Against Homelessness",
+      dates: "November 2019 - Present",
+      type: "Volunteer",
+      skills: [
+        "Co-founded the event with another member of Run Wild Manchester in 2019, raising over £3000 in the first year and over £10,000 in 2022",
+        "Coordinated the promotion of the event to runners around Manchester through the event website and social media pages",
+        "Coordinated the team of volunteer run leaders to cover the full 24 hours in 30 minute blocks"
       ]
     },
     {
@@ -40,12 +51,11 @@ const About = () => {
         "Managed the densely packed crowds in the front rows at concerts, including  handling of crowd surfers at the front of stage pit barrier", 
         "Handled challenging customer service situations often involving intoxicated or aggressive customers including cases of fighting, harassment, and substance misuse",
       ]
-    }
-  ]
-
-  let education = [
+    },
     {
-      school: "University of Manchester",
+      title: "Student",
+      organisation: "University of Manchester",
+      type: "Student",
       dates: "September 2018 - June 2022",
       skills: [
         "Graduated as a Master of Physics (1st Class with honours)",
@@ -54,35 +64,11 @@ const About = () => {
         "Completed numerous practical laboratory experiments, involving extensive statistical analysis using python and frequent use of specialist equipment",
       ]
     },
-    { 
-      school: "John Leggott College",
-      dates: "September 2016 - July 2018",
-      skills: [
-        "Achieved 4 A*s at A-level in Maths, Further Maths, Physics, and Chemistry",
-      ]
-    },
-    { 
-      school: "South Axholme Academy",
-      dates: "September 2011 - July 2016",
-      skills: [
-        "Achieved 12 A*s at GCSE including Computing, Maths, Further Maths and English",
-      ]
-    }
-  ]
-
-  let volunteering = [
     {
-      organisation: "Manchester 24 Hour Run Against Homelessness",
-      dates: "November 2019 - Present",
-      skills: [
-        "Co-founded the event with another member of Run Wild Manchester in 2019, raising over £3000 in the first year and over £10,000 in 2022",
-        "Coordinated the promotion of the event to runners around Manchester through the event website and social media pages",
-        "Coordinated the team of volunteer run leaders to cover the full 24 hours in 30 minute blocks"
-      ]
-    },
-    {
+      title: "Various Roles",
       organisation: "Run Wild Manchester",
       dates: "September 2019 - June 2022",
+      type: "Volunteer",
       skills: [
         "Volunteered as vice chair of the society for 1 year and as chair for the following 2 years",
         "Organised weekly runs for over 100 participants of all abilities, as well as additional social events every 4-6 weeks",
@@ -96,7 +82,6 @@ const About = () => {
   return (
     <>
       <section>
-        <div className="bg-theme heading-bar"><h1>Summary</h1></div>
         <Container fluid>
           <Card className="card-cv">
             <Card.Body>
@@ -109,64 +94,20 @@ const About = () => {
       <section>
         <div className="bg-theme heading-bar"><h1>Employment and Experience</h1></div>
         <Container fluid>
-          {employment.map(
+          {experience.map(
             (job) => (
               <Card className="card-cv">
                 <Card.Body>
                   <Card.Title>{job.title} at {job.organisation}</Card.Title>
                   <Card.Subtitle>{job.type} {job.dates}</Card.Subtitle>
-                  <Card.Text>
-                    <ul>
+                  <Card.Text as="ul">
                       {job.skills.map((skill) => <li>{skill}</li>)}
-                    </ul>
                   </Card.Text>
                 </Card.Body>
               </Card>
             )
           )}
         </Container>
-      </section>
-
-      <section>
-        <div className="bg-theme heading-bar"><h1>Education</h1></div>
-        <Container fluid>
-          {education.map(
-            (school) => (
-              <Card className="card-cv">
-                <Card.Body>
-                  <Card.Title>{school.school}</Card.Title>
-                  <Card.Subtitle>{school.dates}</Card.Subtitle>
-                  <Card.Text>
-                    <ul>
-                      {school.skills.map((skill) => <li>{skill}</li>)}
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            )
-          )}
-        </Container>
-      </section>
-      
-      <section>
-        <div className="bg-theme heading-bar"><h1>Volunteering</h1></div>
-        <Container fluid>
-          {volunteering.map(
-            (role) => (
-              <Card className="card-cv">
-                <Card.Body>
-                  <Card.Title>{role.organisation}</Card.Title>
-                  <Card.Subtitle>{role.dates}</Card.Subtitle>
-                  <Card.Text>
-                    <ul>
-                      {role.skills.map((skill) => <li>{skill}</li>)}
-                    </ul>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            )
-          )}
-      </Container>
       </section>
     </>
   );
