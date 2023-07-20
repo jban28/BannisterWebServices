@@ -6,13 +6,23 @@ import { useState } from "react";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [message, setMessage] = useState("Submit");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setMessage("Processing ...")
     fetch("https://enquiries.bannisterwebservices.co.uk/contact-form", {
       method: "POST",
       body: new FormData(e.target)
-    }).then().then(setSubmitted(true))
+    })
+    .then(response => {
+      if (response.ok === true){setSubmitted(true)}
+      else {throw new Error("Service not available")}
+    })
+    .catch(error => {
+      console.log(error)
+      setMessage("Submission failed, click to try again.")
+    })
   }
 
   return (
@@ -37,7 +47,7 @@ const Contact = () => {
             <Form.Control as="textarea" rows={5} placeholder="Enter message" name="message" id="subject" required/>
           </Form.Group>
           <div id="response"></div>
-          <Button type="submit">Submit form</Button>
+          <Button type="submit">{message}</Button>
         </Form>
       }
 

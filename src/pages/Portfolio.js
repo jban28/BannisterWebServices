@@ -67,7 +67,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <Container lg>
+      <Container fluid="lg">
         <Row xs={1} md={2} lg={3} className="g-4">
           {projectList.map( (project) => (
             <Col>
