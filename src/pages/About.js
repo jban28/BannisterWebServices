@@ -95,13 +95,13 @@ const About = () => {
         <div className="bg-theme heading-bar"><h1>Employment and Experience</h1></div>
         <Container fluid>
           {experience.map(
-            (job) => (
-              <Card className="card-cv">
+            (job, index) => (
+              <Card className="card-cv" key={index}>
                 <Card.Body>
                   <Card.Title>{job.title} at {job.organisation}</Card.Title>
                   <Card.Subtitle>{job.type} {job.dates}</Card.Subtitle>
                   <Card.Text as="ul">
-                      {job.skills.map((skill) => <li>{skill}</li>)}
+                      {job.skills.map((skill, index) => <li key={index}>{skill}</li>)}
                   </Card.Text>
                 </Card.Body>
               </Card>

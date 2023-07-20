@@ -69,9 +69,9 @@ const Portfolio = () => {
     <>
       <Container fluid="lg">
         <Row xs={1} md={2} lg={3} className="g-4">
-          {projectList.map( (project) => (
-            <Col>
-              <Project key={project.title} data={project}></Project>
+          {projectList.map( (project, index) => (
+            <Col key={index}>
+              <Project data={project}></Project>
             </Col>
           ))}
         </Row>

@@ -21,15 +21,16 @@ const Project = (props) => {
           </Nav.Item>
         </Nav>
         <Card.Body>
-          <Card.Text>
-            {(section === "description") && <p>{props.data.description}</p>}
+          
+            {(section === "description") && <Card.Text>{props.data.description}</Card.Text>}
             {(section === "technical") &&
-              <ul>
-                {props.data.technical.map((item) => <li key={item}>{item}</li>)}
-              </ul>
+              <>
+                <Card.Text as="ul">
+                  {props.data.technical.map((item, index) => <li key={index}>{item}</li>)}
+                </Card.Text>
+                <Button href={props.data.git}><img height="26px" width="26px" className="git-icon" src="/github-mark-white.svg" alt="git"/>View source on github</Button>
+              </>
             }
-          </Card.Text>
-          {(section === "technical") && <Button href={props.data.git}><img height="26px" width="26px" className="git-icon" src="/github-mark-white.svg" alt="git"/>View source on github</Button>}
         </Card.Body>
       </Card>
     </>
