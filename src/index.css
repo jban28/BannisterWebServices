@@ -1,7 +1,9 @@
 :root {
-  --bs-link-color: black;
-  --bs-link-hover-color: black;
-  --bs-nav-tabs-border-color: black;
+  --theme-main: #ff6000;
+  --theme-1: white;
+  --bs-link-color: var(--theme-1);
+  --bs-link-hover-color: var(--theme-1);
+  --bs-nav-tabs-border-color: var(--theme-1);
 }
 
 body {
@@ -13,14 +15,13 @@ body {
 }
 
 form {
-  margin-top: 24px;
+  margin: 24px;
 }
 
 .form-group {
   text-align: left;
   margin: auto;
   max-width: 500px;
-  padding: 0px 12px;
 }
 
 ul {
@@ -37,8 +38,8 @@ div.nav-link:hover {
 
 .btn-primary {
   margin: auto;
-  --bs-btn-color: black;
-  --bs-btn-active-color: black;
+  --bs-btn-color: var(--theme-1);
+  --bs-btn-active-color: var(--theme-1);
   --bs-btn-bg: #ff6000;
   --bs-btn-border-color: #ff6000;
   --bs-btn-hover-bg: #d25000;
@@ -50,25 +51,31 @@ div.nav-link:hover {
 }
 
 .bg-theme {
+  color: var(--theme-1);
+  background-color: var(--theme-main);
+}
+
+.bg-white {
+  background-color: white;
   color: black;
-  background-color: #ff6000;
 }
 
 .logo {
   padding-top: 12px;
 }
 
-.navbar {
-  margin-bottom: 12px;
-}
-
 .navbar-nav {
-  --bs-nav-link-color: black;
-  --bs-nav-link-hover-color: black;
+  --bs-navbar-active-color: var(--theme-1);
+  --bs-nav-link-color: var(--theme-1);
+  --bs-nav-link-hover-color: var(--theme-1);
 }
 
 a.nav-link {
   width: 90px;
+}
+
+.g-4 {
+  margin: 0px 0px 24px;
 }
 
 .card {
@@ -112,9 +119,67 @@ a.nav-link {
   margin-bottom: 24px;
 }
 
+.fill-height-1 {
+  height: calc(100vh - 184.5px);
+}
+
+.fill-height-2 {
+  height: calc(100vh - 58px);
+}
+
+.fix-width-1 {
+  width: calc(100% - 48px);
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.welcome-heading {
+  font-size: 12vw;
+  text-align: left;
+  animation: slide-in 1s;
+}
+
+.welcome-heading-small {
+  font-size: 8vw;
+}
+
+.welcome-body {
+  font-size: 150%;
+}
+
+.footer {
+  height: 50px;
+}
+
+@media only screen and (min-width: 800px) {
+  .fix-width-1 {
+    width: 750px;
+    margin: auto;
+  }
+
+  .welcome-heading {
+    font-size: 100px;
+  }
+
+  .welcome-heading-small {
+    font-size: 67px;
+  }
+}
+
 #root {
   min-height: 100vh;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  padding-bottom: 36px;
+}
+
+@keyframes slide-in {
+  from {left: -100vh;}
+  to {left: 0px;}
 }

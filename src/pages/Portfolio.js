@@ -57,9 +57,10 @@ const Portfolio = () => {
       title: "C++ Degree Module",
       subtitle: "Titled: Object Oriented Programming in the C++ Language",
       git: "https://github.com/jban28/MPhys-Radiotherapy-49/tree/main",
-      description: "My master's degree project involved creating a Convolutional Neural Network that could predict recurrence of Head and Neck cancer after radiotherapy based on CT scans of the tumour site.",
+      description: "I completed an optional degree module on Object Oriented Programming using the C++ programming language ",
       technical: [
-        "CNN programmed in Python using the Pytorch library"
+        "Assessment composed of 6 short assesments and a larger project",
+        "Learnt the fundamental concepts of OOP and features of the C++ leanguage"
       ],
       imageFile: "/oop.png"
     }

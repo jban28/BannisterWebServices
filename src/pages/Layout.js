@@ -27,6 +27,7 @@ const Layout = () => {
       </Navbar>
 
       <Outlet />
+      <div className="bg-theme footer"></div>
     </>
   )
 };

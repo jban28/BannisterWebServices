@@ -82,7 +82,7 @@ const About = () => {
   return (
     <>
       <section>
-        <Container fluid>
+        <Container fluid className="px-4">
           <Card className="card-cv">
             <Card.Body>
               I am a recent Physics graduate looking to begin a career in web development. I am currently working on a voluntary basis to improve my skills through a variety of small projects. I have previously been employed in high-pressure customer facing environments requiring good communication skills. At University I took a leading role in a volunteer run society and co-founded an annual charity event, which I remain heavily involved with. I spend most of my spare time outside, enjoying activities such as running, hiking and mountain biking.
@@ -93,7 +93,7 @@ const About = () => {
 
       <section>
         <div className="bg-theme heading-bar"><h1>Employment and Experience</h1></div>
-        <Container fluid>
+        <Container fluid className="px-4">
           {experience.map(
             (job, index) => (
               <Card className="card-cv" key={index}>
