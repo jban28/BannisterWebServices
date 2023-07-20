@@ -50,19 +50,16 @@ def contact_form ():
                 email,
             ],
         )
-    except:
-        return "service not available", 500
-    
-    try:
+
         client_message = f"""Hi {name},
-Thank you for contacting Bannister Web Services. 
+    Thank you for contacting Bannister Web Services. 
 
-James wil be in touch with a response to your enquiry as soon as possible.
+    James wil be in touch with a response to your enquiry as soon as possible.
 
-Your message: 
-Subject: \"{subject}\"
-Message: \"{message}\"
-"""
+    Your message: 
+    Subject: \"{subject}\"
+    Message: \"{message}\"
+    """
         ses_client.send_email(
             Source='noreply@bannisterwebservices.co.uk',
             Destination={
@@ -83,7 +80,10 @@ Message: \"{message}\"
                 }
             }
         )
-    finally:
+    except:
+       return "service not available", 500
+
+    else:
         return "sent", 200
 
 if __name__ == "__main__":
