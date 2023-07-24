@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 :root {
-  --theme-main: #ff6000;
+  --theme-main: #ff2a00;
   --theme-1: white;
   --bs-link-color: var(--theme-1);
   --bs-link-hover-color: var(--theme-1);
@@ -60,10 +62,6 @@ div.nav-link:hover {
   color: black;
 }
 
-.logo {
-  padding-top: 12px;
-}
-
 .navbar-nav {
   --bs-navbar-active-color: var(--theme-1);
   --bs-nav-link-color: var(--theme-1);
@@ -119,12 +117,10 @@ a.nav-link {
   margin-bottom: 24px;
 }
 
-.fill-height-1 {
-  height: calc(100vh - 184.5px);
-}
-
-.fill-height-2 {
+.fill-height-with-nav {
   height: calc(100vh - 58px);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .fix-width-1 {
@@ -140,46 +136,60 @@ a.nav-link {
   transform: translateY(-50%);
 }
 
-.welcome-heading {
-  font-size: 12vw;
-  text-align: left;
-  animation: slide-in 1s;
-}
-
-.welcome-heading-small {
-  font-size: 8vw;
-}
-
-.welcome-body {
-  font-size: 150%;
-}
-
-.footer {
-  height: 50px;
-}
-
-@media only screen and (min-width: 800px) {
-  .fix-width-1 {
-    width: 750px;
-    margin: auto;
-  }
-
-  .welcome-heading {
-    font-size: 100px;
-  }
-
-  .welcome-heading-small {
-    font-size: 67px;
-  }
-}
-
 #root {
   min-height: 100vh;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
 
-@keyframes slide-in {
-  from {left: -100vh;}
-  to {left: 0px;}
+.welcome-box {
+  text-align: left;
+  margin: 12px 12px;
+  display: inline-block;
+}
+
+.welcome-line-logo {
+  font-size: min(15vw, 15vh);
+  font-family: "Roboto Mono";
+  background-color: var(--theme-main);
+  display: inline-block;
+  margin: 5px 0px;
+  padding: 6px 12px;
+}
+
+.welcome-logo-line::first-letter {
+  color: black;
+}
+
+.welcome-line {
+  font-size: min(7vw, 7vh);
+  display: inline-block;
+  text-indent: calc(12px + 0.3ch);
+}
+
+
+@keyframes slide-in-from-left {
+  0% {left: -100vw;}
+  50% {left: +20px;}
+  100% {left: 0px;}
+}
+
+.slide-in-from-left {
+  position: relative;
+  left: 0px;
+  animation: slide-in-from-left 4s;
+  -webkit-animation: slide-in-from-left 4s; /* Safari and Chrome */
+}
+
+@keyframes slide-in-from-right {
+  0% {left: +100vw;}
+  50% {left: -20px;}
+  100% {left: 0px;}
+}
+
+.slide-in-from-right {
+  position: relative;
+  left: 0px;
+  animation: slide-in-from-right 4s;
+  -webkit-animation: slide-in-from-right 4s; /* Safari and Chrome */
 }

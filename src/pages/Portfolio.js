@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Project from "../components/Project";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-
+import Navigation from "../components/Navigation";
 
 const Portfolio = () => {
   const projectList = [
@@ -68,6 +68,7 @@ const Portfolio = () => {
 
   return (
     <>
+      <Navigation />
       <Container fluid="lg">
         <Row xs={1} md={2} lg={3} className="g-4">
           {projectList.map( (project, index) => (

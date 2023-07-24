@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import Navigation from "../components/Navigation";
 
 const About = () => {
   const experience = [
@@ -81,6 +82,8 @@ const About = () => {
 
   return (
     <>
+      <Navigation />
+
       <section>
         <Container fluid className="px-4">
           <Card className="card-cv">
@@ -92,6 +95,7 @@ const About = () => {
       </section>
 
       <section>
+        
         <div className="bg-theme heading-bar"><h1>Employment and Experience</h1></div>
         <Container fluid className="px-4">
           {experience.map(

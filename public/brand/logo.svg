@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="512px" height="403px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face{font-family:"Roboto Mono";src:url(data:application/font-woff;charset=utf-8;base64,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) format("woff"); font-weight:bold;font-style:normal;}
+    </style>
+  </defs>
+  
+  <g>
+    <rect id="logo-line-1" class="slide-in" width="512" height="123" y="0" fill="#ff2a00"></rect>
+    <text x="20" y="95" font-size="87" textLength="472" font-family="Roboto Mono" font-weight="bold" fill="white"><tspan fill="black">B</tspan>annister</text>
+  </g>
+
+  <g id="logo-line-2">
+    <rect width="197" height="123" y="140" fill="#ff2a00"></rect>
+    <text x="20" y="235" textLength="157" font-family="Roboto Mono" font-size="87" font-weight="bold" fill="white"><tspan fill="black">W</tspan>eb</text>
+  </g>
+
+  <g id="logo-line-3">
+    <rect width="458" height="123" y="280" fill="#ff2a00"></rect>
+    <text x="20" y="375" textLength="418" font-family="Roboto Mono" font-size="87" font-weight="bold" fill="white"><tspan fill="black">S</tspan>ervices</text>
+  </g>
+
+  
+</svg>

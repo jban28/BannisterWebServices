@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import { useState } from "react";
+import Navigation from "../components/Navigation";
 
 const Home = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -28,10 +29,22 @@ const Home = () => {
 
   return (
     <>
-      <div className="fill-height-1">
-        <h1 className="welcome-heading fix-width-1 vertical-center"><span className="welcome-heading-small">Welcome to</span> <span className="bg-theme">BANNISTER</span><br/>WEB SERVICES</h1>
+      
+      <div className="fill-height-with-nav">
+        <div className="welcome-box vertical-center">
+          <h1>
+            <span className="welcome-line slide-in-from-left">Welcome to </span><br/>
+            <span className="welcome-line-logo slide-in-from-right">Bannister </span><br/>
+            <span className="welcome-line-logo slide-in-from-left">Web </span><br/>
+            <span className="welcome-line-logo slide-in-from-right">Services</span><br/>
+            <span className="welcome-line slide-in-from-left">.co.uk</span>
+          </h1>
+        </div>
       </div>
-      <div className="fill-height-2 bg-white mb-5">
+
+      <Navigation />
+
+      <div className="fill-height-with-nav bg-white mb-5">
         <p className="welcome-body fix-width-1 vertical-center">I am James Bannister, an aspiring developer. I established Bannister Web Services as a way for me to develop my programming skills and showcase my work. I provide free web and software development services on a casual basis and will consider taking on any project that I think I am capable of completing.</p>
       </div>
 
