@@ -118,7 +118,7 @@ a.nav-link {
 }
 
 .fill-height-with-nav {
-  height: calc(100vh - 58px);
+  height: min(calc(100vh - 58px), 100vw);
   max-width: 100%;
   overflow: hidden;
 }
@@ -149,15 +149,16 @@ a.nav-link {
 }
 
 .welcome-line-logo {
-  font-size: min(15vw, 15vh);
+  font-size: min(13vw, 13vh);
   font-family: "Roboto Mono";
+  font-weight: bold;
   background-color: var(--theme-main);
   display: inline-block;
   margin: 5px 0px;
   padding: 6px 12px;
 }
 
-.welcome-logo-line::first-letter {
+.welcome-line-logo::first-letter {
   color: black;
 }
 
