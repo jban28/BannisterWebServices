@@ -55,7 +55,7 @@ const Portfolio = () => {
     },
     {
       title: "C++ Degree Module",
-      subtitle: "Titled: Object Oriented Programming in the C++ Language",
+      subtitle: "Object Oriented Programming in the C++ Language",
       git: "https://github.com/jban28/MPhys-Radiotherapy-49/tree/main",
       description: "I completed an optional degree module on Object Oriented Programming using the C++ programming language ",
       technical: [
@@ -69,7 +69,7 @@ const Portfolio = () => {
   return (
     <>
       <Navigation />
-      <Container fluid="lg">
+      <Container fluid="lg" className="pb-1">
         <Row xs={1} md={2} lg={3} className="g-4">
           {projectList.map( (project, index) => (
             <Col key={index}>

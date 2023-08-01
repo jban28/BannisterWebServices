@@ -26,10 +26,10 @@ const Navigation = () => {
   }, [navbarRef])
 
   return(
-    <Navbar className="justify-content-center bold" sticky="top" ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
+    <Navbar id="navbar" className="justify-content-center bold" sticky="top" ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
       <Nav variant="underline">
         <Nav.Item>
-          <Nav.Link active={page === "/"} href="/" onClick={() => setPage("home")}>Home</Nav.Link>
+          <Nav.Link active={page === "/"} href="/#navbar" onClick={() => setPage("home")}>Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link active={page === "/portfolio"} href="/portfolio" onClick={() => setPage("portfolio")}>Portfolio</Nav.Link>

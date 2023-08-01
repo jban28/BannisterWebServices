@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <>
       
-      <div className="fill-height-with-nav">
+      <div className="fill-height-with-nav-square">
         <div className="welcome-box vertical-center">
           <h1>
             <span className="welcome-line slide-in-from-left">Welcome to </span><br/>
@@ -44,13 +44,16 @@ const Home = () => {
 
       <Navigation />
 
-      <div className="fill-height-with-nav bg-white mb-5">
-        <p className="welcome-body fix-width-1 vertical-center">I am James Bannister, an aspiring developer. I established Bannister Web Services as a way for me to develop my programming skills and showcase my work. I provide free web and software development services on a casual basis and will consider taking on any project that I think I am capable of completing.</p>
+      <div className="bg-white">
+        <div className="fix-width welcome-body">
+          <p className="">I am James Bannister, an aspiring developer. I established Bannister Web Services as a way for me to develop my programming skills and showcase my work. I provide free web and software development services on a casual basis and will consider taking on any project that I think I am capable of completing.</p>
+          <Button href="/portfolio">View my portfolio</Button>
+        </div>
       </div>
 
-      <div className="heading-bar bg-theme"><h1>Contact me</h1></div>
       {!submitted &&
         <Form onSubmit={handleSubmit} acceptCharset="utf-8">
+          <h1>Contact me</h1>
           <Form.Group className="form-group">
             <Form.Label htmlFor="name">Name</Form.Label>
             <Form.Control type="text" placeholder="Enter your name" name="name" id="name" required/>

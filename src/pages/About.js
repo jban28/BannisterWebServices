@@ -83,23 +83,23 @@ const About = () => {
   return (
     <>
       <Navigation />
+      <div className="bg-white fix-width about-content">
+          <h1>Summary</h1>
+          <p>I am a recent Physics graduate looking to begin a career in web development. I am currently working on a voluntary basis to improve my skills through a variety of small projects. I have previously been employed in high-pressure customer facing environments requiring good communication skills. At University I took a leading role in a volunteer run society and co-founded an annual charity event, which I remain heavily involved with. I spend most of my spare time outside, enjoying activities such as running, hiking and mountain biking.</p>
 
-      <section>
-        <Container fluid className="px-4">
-          <Card className="card-cv">
-            <Card.Body>
-              I am a recent Physics graduate looking to begin a career in web development. I am currently working on a voluntary basis to improve my skills through a variety of small projects. I have previously been employed in high-pressure customer facing environments requiring good communication skills. At University I took a leading role in a volunteer run society and co-founded an annual charity event, which I remain heavily involved with. I spend most of my spare time outside, enjoying activities such as running, hiking and mountain biking.
-            </Card.Body>
-          </Card>
-        </Container>
-      </section>
-
-      <section>
         
-        <div className="bg-theme heading-bar"><h1>Employment and Experience</h1></div>
-        <Container fluid className="px-4">
+        <h1>Employment and Experience</h1>
+        <div className="">
           {experience.map(
             (job, index) => (
+              <div key={index}>
+                <h2>{job.title} at {job.organisation}</h2>
+                <h3>{job.type} {job.dates}</h3>
+                <ul>
+                  {job.skills.map((skill, index) => <li key={index}>{skill}</li>)}
+                </ul>
+              </div>
+              /*
               <Card className="card-cv" key={index}>
                 <Card.Body>
                   <Card.Title>{job.title} at {job.organisation}</Card.Title>
@@ -108,11 +108,11 @@ const About = () => {
                       {job.skills.map((skill, index) => <li key={index}>{skill}</li>)}
                   </Card.Text>
                 </Card.Body>
-              </Card>
+              </Card>*/
             )
           )}
-        </Container>
-      </section>
+        </div>
+      </div>
     </>
   );
 };

@@ -16,14 +16,26 @@ body {
   text-align: center;
 }
 
+p {
+  margin-bottom: 24px;
+}
+
 form {
-  margin: 24px;
+  padding: 24px;
 }
 
 .form-group {
   text-align: left;
   margin: auto;
   max-width: 500px;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 ul {
@@ -42,19 +54,23 @@ div.nav-link:hover {
   margin: auto;
   --bs-btn-color: var(--theme-1);
   --bs-btn-active-color: var(--theme-1);
-  --bs-btn-bg: #ff6000;
-  --bs-btn-border-color: #ff6000;
-  --bs-btn-hover-bg: #d25000;
-  --bs-btn-hover-border-color: #ad4200;
-  --bs-btn-active-bg: #ad4200;
-  --bs-btn-active-border-color: #9c3c00;
-  --bs-btn-disabled-bg: #ff6000;
-  --bs-btn-disabled-border-color: #ff6000;
+  --bs-btn-bg: #ff2a00;
+  --bs-btn-border-color: #ff2a00;
+  --bs-btn-hover-bg: #e22600;
+  --bs-btn-hover-border-color: #e22600;
+  --bs-btn-active-bg: #c62201;
+  --bs-btn-active-border-color: #c62201;
+  --bs-btn-disabled-bg: #ff2a00;
+  --bs-btn-disabled-border-color: #ff2a00;
 }
 
 .bg-theme {
   color: var(--theme-1);
   background-color: var(--theme-main);
+}
+
+.bg-transparent {
+  color: white;
 }
 
 .bg-white {
@@ -101,8 +117,13 @@ a.nav-link {
 }
 
 .card-cv {
-  max-width: 800px;
-  margin: 24px auto 0px;
+  margin: 0px auto 24px;
+  padding: 8px;
+}
+
+.about-content {
+  padding: 24px;
+  margin: 0px 24px;
 }
 
 .heading-bar {
@@ -117,16 +138,10 @@ a.nav-link {
   margin-bottom: 24px;
 }
 
-.fill-height-with-nav {
+.fill-height-with-nav-square {
   height: min(calc(100vh - 58px), 100vw);
   max-width: 100%;
   overflow: hidden;
-}
-
-.fix-width-1 {
-  width: calc(100% - 48px);
-  margin-left: 24px;
-  margin-right: 24px;
 }
 
 .vertical-center {
@@ -134,6 +149,26 @@ a.nav-link {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.welcome-body {
+  padding: 48px;
+  width: 100%;
+  font-size: large;
+  margin: 0px;
+}
+
+.fix-width-margin {
+  margin: 0px 24px;
+}
+
+@media screen and (min-width: 800px) {
+  .fix-width {
+    width: 752px;
+    margin: auto;
+  }
 }
 
 #root {
