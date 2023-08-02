@@ -85,6 +85,7 @@ div.nav-link:hover {
 
 a.nav-link {
   width: 90px;
+  font-weight: bold;
 }
 
 .g-4 {
@@ -224,7 +225,8 @@ a.nav-link {
 }
 
 .slide-up {
-  animation: slide-up 2s;
+  animation: slide-up 1s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes fade-in {
@@ -234,4 +236,5 @@ a.nav-link {
 
 .fade-in {
   animation: fade-in 2s;
+  animation-fill-mode: backwards;
 }

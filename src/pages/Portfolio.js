@@ -14,6 +14,7 @@ const Portfolio = () => {
       description: "A website showcasing my own programming and web development projects and to advertise my services as a developer.",
       technical: [
         "Client-rendered SPA built using React JS",
+        "Backend API written in Flask for handling contact form submissions",
         "Bootstrap framework used throughout for styling and layout"
       ],
       imageFile: "/bws.png"
@@ -69,10 +70,10 @@ const Portfolio = () => {
   return (
     <>
       <Navigation transition="fade-in" />
-      <Container fluid="lg" className="pb-1 slide-up">
+      <Container fluid="lg" className="pb-1">
         <Row xs={1} md={2} lg={3} className="g-4">
           {projectList.map( (project, index) => (
-            <Col key={index}>
+            <Col key={index} className="fade-in" style={{animationDelay: (0.3 * index) + 's'}}>
               <Project data={project}></Project>
             </Col>
           ))}

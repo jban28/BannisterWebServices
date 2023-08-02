@@ -17,7 +17,7 @@ const About = () => {
       ]
     },
     {
-      title: "Event Organiser",
+      title: "Event Volunteer",
       organisation: "Manchester 24 Hour Run Against Homelessness",
       dates: "November 2019 - Present",
       type: "Volunteer",
