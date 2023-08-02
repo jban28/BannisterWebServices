@@ -199,33 +199,20 @@ a.nav-link {
   -webkit-animation: slide-in-from-right 4s; /* Safari and Chrome */
 }
 
-@keyframes slide-up-from-bottom-home {
+@keyframes slide-up-from-bottom {
   0% { transform: translateY(calc(100vh - min(calc(100vh - 82px), 100vw)));}
 }
 
-@-webkit-keyframes slide-up-from-bottom-home {
+@-webkit-keyframes slide-up-from-bottom {
   0% { -webkit-transform: translateY(100vh - min(calc(100vh - 82px), 100vw));}
 }
 
-.slide-up-from-bottom-home {
+.slide-up-from-bottom {
   transform: translateY(0vh);
   -webkit-transform: translateY(0vh);
-  animation: slide-up-from-bottom-home 2s;
-  -webkit-animation: slide-up-from-bottom-home 2s; /* Safari and Chrome */
+  animation: slide-up-from-bottom 2s;
+  -webkit-animation: slide-up-from-bottom 2s; /* Safari and Chrome */
   animation-delay: 2s;
-  animation-fill-mode: backwards;
-}
-
-@keyframes slide-up {
-  0% { transform: translateY(100vh);}
-}
-
-@-webkit-keyframes slide-up {
-  0% { -webkit-transform: translateY(100vh);}
-}
-
-.slide-up {
-  animation: slide-up 1s;
   animation-fill-mode: backwards;
 }
 
