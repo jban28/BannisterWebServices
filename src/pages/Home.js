@@ -1,8 +1,6 @@
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
 import { useState } from "react";
 import Navigation from "../components/Navigation";
 
@@ -76,13 +74,9 @@ const Home = () => {
       }
 
       {submitted && 
-        <Container fluid>
-          <Card className="card-cv">
-            <Card.Body>
-              Thankyou for contacting Bannister Web Services. You will recieve an Email confirmation of your message. I will respond to your message as soon as possible.
-            </Card.Body>
-          </Card>
-        </Container>
+        <div className="fix-width welcome-body">
+          Thankyou for contacting Bannister Web Services. You will recieve an Email confirmation of your message. I will respond to your message as soon as possible.
+        </div>
       }
     </>
   )
