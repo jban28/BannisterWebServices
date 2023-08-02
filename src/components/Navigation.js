@@ -4,7 +4,7 @@ import { useEffect, useRef, useState} from "react";
 import { useLocation } from "react-router-dom";
 
 
-const Navigation = () => {
+const Navigation = (props) => {
   const [page, setPage] = useState(useLocation().pathname);
   const [bgOpacity, setBgOpacity] = useState("00");
   const navbarRef = useRef();
@@ -26,7 +26,7 @@ const Navigation = () => {
   }, [navbarRef])
 
   return(
-    <Navbar id="navbar" className="justify-content-center bold" sticky="top" ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
+    <Navbar id="navbar"  sticky="top" className={"justify-content-center " + props.transition} ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
       <Nav variant="underline">
         <Nav.Item>
           <Nav.Link active={page === "/"} href="/#navbar" onClick={() => setPage("home")}>Home</Nav.Link>

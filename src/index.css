@@ -229,3 +229,20 @@ a.nav-link {
   animation: slide-in-from-right 4s;
   -webkit-animation: slide-in-from-right 4s; /* Safari and Chrome */
 }
+
+@keyframes slide-up-from-bottom {
+  0% { transform: translateY(calc(100vh - min(calc(100vh - 58px), 100vw)));}
+}
+
+@-webkit-keyframes slide-up-from-bottom {
+  0% { -webkit-transform: translateY(100vh - min(calc(100vh - 58px), 100vw));}
+}
+
+.slide-up-from-bottom {
+  transform: translateY(0vh);
+  -webkit-transform: translateY(0vh);
+  animation: slide-up-from-bottom 2s;
+  -webkit-animation: slide-up-from-bottom 2s; /* Safari and Chrome */
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
