@@ -29,7 +29,7 @@ const Navigation = (props) => {
     <Navbar id="navbar"  sticky="top" className={"justify-content-center " + props.transition} ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
       <Nav variant="underline">
         <Nav.Item>
-          <Nav.Link active={page === "/"} href="/" onClick={() => setPage("home")}>Home</Nav.Link>
+          <Nav.Link active={page === "/"} href="/#navbar" onClick={() => setPage("home")}>Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link active={page === "/portfolio"} href="/portfolio" onClick={() => setPage("portfolio")}>Portfolio</Nav.Link>

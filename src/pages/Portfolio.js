@@ -57,7 +57,7 @@ const Portfolio = () => {
     {
       title: "C++ Degree Module",
       subtitle: "Object Oriented Programming in the C++ Language",
-      git: "https://github.com/jban28/MPhys-Radiotherapy-49/tree/main",
+      git: "https://github.com/jban28/OOP",
       description: "I completed an optional degree module on Object Oriented Programming using the C++ programming language ",
       technical: [
         "Assessment composed of 6 short assesments and a larger project",
