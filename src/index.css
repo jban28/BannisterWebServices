@@ -123,6 +123,10 @@ a.nav-link {
   overflow: hidden;
 }
 
+.fill-height-with-nav-footer { 
+  height: calc(100vh - 190px);
+}
+
 .vertical-center {
   position: relative;
   top: 50%;
