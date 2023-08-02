@@ -10,7 +10,7 @@ const Navigation = (props) => {
   const navbarRef = useRef();
 
   let handleScroll = () => {
-    let navbarMaxTopValue = Math.min(window.innerHeight - navbarRef.current.getBoundingClientRect().height, window.innerWidth);
+    let navbarMaxTopValue = Math.min(window.innerHeight - navbarRef.current.getBoundingClientRect().height - 24, window.innerWidth);
     let navbarCurrentTopValue = navbarRef.current.getBoundingClientRect().top;
     let bgOpacityDecimal = Math.round(255 * Math.min((1 - (navbarCurrentTopValue / navbarMaxTopValue)), 1))
     if (bgOpacityDecimal < 16) {setBgOpacity("0" + bgOpacityDecimal.toString(16))}

@@ -1,5 +1,3 @@
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
 import Navigation from "../components/Navigation";
 
 const About = () => {
@@ -82,10 +80,10 @@ const About = () => {
 
   return (
     <>
-      <Navigation />
-      <div className="bg-white fix-width about-content">
-          <h1>Summary</h1>
-          <p>I am a recent Physics graduate looking to begin a career in web development. I am currently working on a voluntary basis to improve my skills through a variety of small projects. I have previously been employed in high-pressure customer facing environments requiring good communication skills. At University I took a leading role in a volunteer run society and co-founded an annual charity event, which I remain heavily involved with. I spend most of my spare time outside, enjoying activities such as running, hiking and mountain biking.</p>
+      <Navigation transition="fade-in" />
+      <div className="bg-white fix-width about-content fade-in">
+        <h1>Summary</h1>
+        <p>I am a recent Physics graduate looking to begin a career in web development. I am currently working on a voluntary basis to improve my skills through a variety of small projects. I have previously been employed in high-pressure customer facing environments requiring good communication skills. At University I took a leading role in a volunteer run society and co-founded an annual charity event, which I remain heavily involved with. I spend most of my spare time outside, enjoying activities such as running, hiking and mountain biking.</p>
 
         
         <h1>Employment and Experience</h1>
@@ -99,16 +97,6 @@ const About = () => {
                   {job.skills.map((skill, index) => <li key={index}>{skill}</li>)}
                 </ul>
               </div>
-              /*
-              <Card className="card-cv" key={index}>
-                <Card.Body>
-                  <Card.Title>{job.title} at {job.organisation}</Card.Title>
-                  <Card.Subtitle>{job.type} {job.dates}</Card.Subtitle>
-                  <Card.Text as="ul">
-                      {job.skills.map((skill, index) => <li key={index}>{skill}</li>)}
-                  </Card.Text>
-                </Card.Body>
-              </Card>*/
             )
           )}
         </div>

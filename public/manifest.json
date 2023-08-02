@@ -2,14 +2,11 @@
   "short_name": "Bannister Web Services",
   "name": "Bannister Web Services",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+    {"src":"/favicon/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+    {"src":"/favicon/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ff2a00",
   "background_color": "#ffffff"
 }

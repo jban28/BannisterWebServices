@@ -68,8 +68,8 @@ const Portfolio = () => {
 
   return (
     <>
-      <Navigation />
-      <Container fluid="lg" className="pb-1">
+      <Navigation transition="fade-in" />
+      <Container fluid="lg" className="pb-1 slide-up">
         <Row xs={1} md={2} lg={3} className="g-4">
           {projectList.map( (project, index) => (
             <Col key={index}>

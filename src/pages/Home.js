@@ -42,9 +42,9 @@ const Home = () => {
         </div>
       </div>
 
-      <Navigation transition="slide-up-from-bottom" />
+      <Navigation transition="slide-up-from-bottom-home" />
 
-      <div className="bg-white slide-up-from-bottom">
+      <div className="bg-white slide-up-from-bottom-home">
         <div className="fix-width welcome-body">
           <p className="">I am James Bannister, an aspiring developer. I established Bannister Web Services as a way for me to develop my programming skills and showcase my work. I provide free web and software development services on a casual basis and will consider taking on any project that I think I am capable of completing.</p>
           <Button href="/portfolio">View my portfolio</Button>
@@ -52,7 +52,7 @@ const Home = () => {
       </div>
 
       {!submitted &&
-        <Form onSubmit={handleSubmit} acceptCharset="utf-8" className="slide-up-from-bottom">
+        <Form onSubmit={handleSubmit} acceptCharset="utf-8" className="slide-up-from-bottom-home">
           <h1>Contact me</h1>
           <Form.Group className="form-group">
             <Form.Label htmlFor="name">Name</Form.Label>
