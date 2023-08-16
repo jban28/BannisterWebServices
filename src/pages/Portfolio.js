@@ -7,6 +7,17 @@ import Navigation from "../components/Navigation";
 const Portfolio = () => {
   const projectList = [
     {
+      title: "Ben's Geology Blog",
+      subtitle: "Wordpress blog with bespoke theme",
+      git: "https://github.com/jban28/GeologyBen",
+      description: "***NOT YET PUBLISHED*** This will be a blog website for Ben Mayor to post about geology",
+      technical: [
+        "Wordpress based blog",
+        "Bespoke wordpress theme created using php"
+      ],
+      imageFile: "/geology-ben.png"
+    },
+    {
       title: "bannisterwebservices.co.uk",
       subtitle: "This website!",
       link: "/",
