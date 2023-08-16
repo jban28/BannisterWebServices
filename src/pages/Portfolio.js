@@ -15,7 +15,13 @@ const Portfolio = () => {
         "Wordpress based blog",
         "Bespoke wordpress theme created using php"
       ],
-      imageFile: "/geology-ben.png"
+      imageFile: "/geology-ben.png",
+      technologyLogos: [
+        "wordpress",
+        "php",
+        "html5",
+        "css3-alt"
+      ]
     },
     {
       title: "bannisterwebservices.co.uk",
@@ -28,7 +34,14 @@ const Portfolio = () => {
         "Backend API written in Flask for handling contact form submissions",
         "Bootstrap framework used throughout for styling and layout"
       ],
-      imageFile: "/bws.png"
+      imageFile: "/bws.png",
+      technologyLogos: [
+        "react",
+        "square-js",
+        "python",
+        "html5",
+        "css3-alt",
+      ]
     },
     {
       title: "mattpagett.co.uk",
@@ -41,7 +54,14 @@ const Portfolio = () => {
         "Custom element created to allow users to zoom and pan images, supporting all common gestures on desktop and mobile devices",
         "Integrates with my 'Artists API' to manage content"
       ],
-      imageFile: "/matt-pagett.png"
+      imageFile: "/matt-pagett.png",
+      technologyLogos: [
+        "vuejs",
+        "square-js",
+        "python",
+        "html5",
+        "css3-alt",
+      ]
     },
     {
       title: "Artists-API",
@@ -53,7 +73,10 @@ const Portfolio = () => {
         "Communicates with a Mongo Database and AWS S3 bucket to deliver content to users",
         "Uses JSON web tokens to authenticate users and authorise access to services",
       ],
-      imageFile: "/artist-api.png"
+      imageFile: "/artist-api.png",
+      technologyLogos: [
+        "python"
+      ]
     },
     {
       title: "Master's Degree Project",
@@ -63,7 +86,10 @@ const Portfolio = () => {
       technical: [
         "CNN programmed in Python using the Pytorch library"
       ],
-      imageFile: "/mphys.png"
+      imageFile: "/mphys.png",
+      technologyLogos: [
+        "python"
+      ]
     },
     {
       title: "C++ Degree Module",
@@ -74,7 +100,7 @@ const Portfolio = () => {
         "Assessment composed of 6 short assesments and a larger project",
         "Learnt the fundamental concepts of OOP and features of the C++ leanguage"
       ],
-      imageFile: "/oop.png"
+      imageFile: "/oop.png",
     }
   ]
 

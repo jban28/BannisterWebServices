@@ -10,6 +10,9 @@ const Project = (props) => {
     <>
       <Card>
         <a href={props.data.link}><Card.Img variant="top" src={"/portfolio-images"+props.data.imageFile} alt={props.data.title}></Card.Img>
+        <Card.ImgOverlay>
+          {props.data.technologyLogos?.map((logo, index) => (<i key={index} className={"portfolio-icon fa-brands fa-" + logo}></i>))}
+        </Card.ImgOverlay>
         <Card.Title>{props.data.title}</Card.Title></a>
         <Card.Subtitle>{props.data.subtitle}</Card.Subtitle>
         <Nav variant="tabs" className="justify-content-center" defaultActiveKey="#first">
