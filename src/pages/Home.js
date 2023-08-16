@@ -49,6 +49,21 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="bg-theme py-3">
+        <h1 className="my-0 icon-bar">
+          <i className="brand-icon fa-brands fa-html5"><span className="brand-icon-tooltip">HTML5</span></i>
+          <i className="brand-icon fa-brands fa-css3-alt"><span className="brand-icon-tooltip">CSS3</span></i>
+          <i className="brand-icon fa-brands fa-square-js"><span className="brand-icon-tooltip">JavaScript</span></i>
+          <i className="brand-icon fa-brands fa-vuejs"><span className="brand-icon-tooltip">VueJS</span></i>
+          <i className="brand-icon fa-brands fa-react"><span className="brand-icon-tooltip">ReactJS</span></i>
+          <i className="brand-icon fa-brands fa-python"><span className="brand-icon-tooltip">Python</span></i>
+          <i className="brand-icon fa-brands fa-php"><span className="brand-icon-tooltip">PHP</span></i>
+          <i className="brand-icon fa-brands fa-wordpress"><span className="brand-icon-tooltip">Wordpress</span></i>
+          <i className="brand-icon fa-brands fa-bootstrap"><span className="brand-icon-tooltip">Bootstrap</span></i>
+          <i className="brand-icon fa-brands fa-github"><span className="brand-icon-tooltip">GitHub</span></i>
+        </h1>
+      </div>
+
       {!submitted &&
         <Form onSubmit={handleSubmit} acceptCharset="utf-8" className="slide-up-from-bottom">
           <h1>Contact me</h1>

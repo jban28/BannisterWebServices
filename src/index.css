@@ -248,3 +248,43 @@ a.nav-link {
   animation: fade-in 2s;
   animation-fill-mode: backwards;
 }
+
+.brand-icon {
+  font-size: 36px;
+  margin: 0.2em 0.2em;
+  width: 1.5em;
+}
+
+.brand-icon:hover {
+  scale: 1.2;
+}
+
+.brand-icon-tooltip {
+  color: black;
+  background-color: white;
+  visibility: hidden;
+  position: absolute;
+  font-size: small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  top: 120%;
+  left: 50%;
+  margin-left: -43px;
+  padding: 6px;
+  border-radius: 3px;
+  width: 86px;
+}
+
+.brand-icon-tooltip::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.brand-icon:hover .brand-icon-tooltip{
+  visibility: visible;
+}
