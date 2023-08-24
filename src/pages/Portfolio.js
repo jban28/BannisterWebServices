@@ -7,6 +7,29 @@ import Navigation from "../components/Navigation";
 const Portfolio = () => {
   const projectList = [
     {
+      title: "www.mcr24hourrun.co.uk",
+      subtitle: "Charity event I co-founded",
+      link: "https://www.mcr24hourrun.co.uk",
+      description: "This is the website for the charity event I co-founded whilst at university. This project was completed in colloboration with another developer.",
+      imageFile: "/24hourrun.png",
+      technologyLogos: [
+        "fa-brands fa-react",
+        "fa-brands fa-square-js",
+        "fa-brands fa-sass",
+        "fa-brands fa-html5",
+        "fa-brands fa-css3-alt",
+        "fi fi-brands-typescript",
+        "fi fi-brands-bootstrap"
+      ],
+      technical: [
+        "React SPA built using typescript",
+        "Stylesheets compiled using SASS",
+        "Bootstrap used for layout and some UI components",
+        "Integration with Just Giving API"
+      ]
+
+    },
+    {
       title: "Ben's Geology Blog",
       subtitle: "Wordpress blog with bespoke theme",
       git: "https://github.com/jban28/GeologyBen",
@@ -17,10 +40,10 @@ const Portfolio = () => {
       ],
       imageFile: "/geology-ben.png",
       technologyLogos: [
-        "wordpress",
-        "php",
-        "html5",
-        "css3-alt"
+        "fa-brands fa-wordpress",
+        "fa-brands fa-php",
+        "fa-brands fa-html5",
+        "fa-brands fa-css3-alt"
       ]
     },
     {
@@ -36,11 +59,12 @@ const Portfolio = () => {
       ],
       imageFile: "/bws.png",
       technologyLogos: [
-        "react",
-        "square-js",
-        "python",
-        "html5",
-        "css3-alt",
+        "fa-brands fa-react",
+        "fa-brands fa-square-js",
+        "fa-brands fa-python",
+        "fa-brands fa-html5",
+        "fa-brands fa-css3-alt",
+        "fi fi-brands-bootstrap"
       ]
     },
     {
@@ -56,11 +80,11 @@ const Portfolio = () => {
       ],
       imageFile: "/matt-pagett.png",
       technologyLogos: [
-        "vuejs",
-        "square-js",
-        "python",
-        "html5",
-        "css3-alt",
+        "fa-brands fa-vuejs",
+        "fa-brands fa-square-js",
+        "fa-brands fa-python",
+        "fa-brands fa-html5",
+        "fa-brands fa-css3-alt",
       ]
     },
     {
@@ -75,7 +99,7 @@ const Portfolio = () => {
       ],
       imageFile: "/artist-api.png",
       technologyLogos: [
-        "python"
+        "fa-brands fa-python"
       ]
     },
     {
@@ -88,7 +112,7 @@ const Portfolio = () => {
       ],
       imageFile: "/mphys.png",
       technologyLogos: [
-        "python"
+        "fa-brands fa-python"
       ]
     },
     {
