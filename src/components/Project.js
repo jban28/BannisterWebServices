@@ -31,7 +31,8 @@ const Project = (props) => {
                 <Card.Text as="ul">
                   {props.data.technical.map((item, index) => <li key={index}>{item}</li>)}
                 </Card.Text>
-                <Button href={props.data.git}><img height="26px" width="26px" className="git-icon" src="/github-mark-white.svg" alt="git"/>View source on github</Button>
+                {("git" in props.data) && <Button href={props.data.git}><img height="26px" width="26px" className="git-icon" src="/github-mark-white.svg" alt="git"/>View source on github</Button>}
+                
               </>
             }
         </Card.Body>
