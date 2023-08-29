@@ -30,23 +30,6 @@ const Portfolio = () => {
 
     },
     {
-      title: "Ben's Geology Blog",
-      subtitle: "Wordpress blog with bespoke theme",
-      git: "https://github.com/jban28/GeologyBen",
-      description: "***NOT YET PUBLISHED*** This will be a blog website for Ben Mayor to post about geology",
-      technical: [
-        "Wordpress based blog",
-        "Bespoke wordpress theme created using php"
-      ],
-      imageFile: "/geology-ben.png",
-      technologyLogos: [
-        "fa-brands fa-wordpress",
-        "fa-brands fa-php",
-        "fa-brands fa-html5",
-        "fa-brands fa-css3-alt"
-      ]
-    },
-    {
       title: "bannisterwebservices.co.uk",
       subtitle: "This website!",
       link: "/",
@@ -125,6 +108,23 @@ const Portfolio = () => {
         "Learnt the fundamental concepts of OOP and features of the C++ leanguage"
       ],
       imageFile: "/oop.png",
+    },
+    {
+      title: "Ben's Geology Blog",
+      subtitle: "Wordpress blog with bespoke theme",
+      git: "https://github.com/jban28/GeologyBen",
+      description: "***NOT YET PUBLISHED*** This will be a blog website for Ben Mayor to post about geology",
+      technical: [
+        "Wordpress based blog",
+        "Bespoke wordpress theme created using php"
+      ],
+      imageFile: "/geology-ben.png",
+      technologyLogos: [
+        "fa-brands fa-wordpress",
+        "fa-brands fa-php",
+        "fa-brands fa-html5",
+        "fa-brands fa-css3-alt"
+      ]
     }
   ]
 
