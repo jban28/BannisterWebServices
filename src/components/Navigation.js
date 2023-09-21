@@ -35,7 +35,8 @@ const Navigation = (props) => {
           <Nav.Link active={page === "/portfolio"} href="/portfolio" onClick={() => setPage("portfolio")}>Portfolio</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link active={page === "/about"} href="/about" onClick={() => setPage("about")}>About me</Nav.Link>
+          {/*<Nav.Link active={page === "/about"} href="/about" onClick={() => setPage("about")}>About me</Nav.Link>*/}
+          <Nav.Link href="https://blog.bannisterwebservices.co.uk">Blog</Nav.Link>
         </Nav.Item>
       </Nav>
     </Navbar>
