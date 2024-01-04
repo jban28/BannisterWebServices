@@ -22,7 +22,5 @@ jobs:
               run: echo file_changed=[[ ${ALL_CHANGED_FILES[@]} =~ "contact-form/lambda.py" ]] >> $GITHUB_OUTPUT
 
             - name: Upload changes
-              env: 
-                FILE_CHANGED: ${{ steps.check-changes.outputs.FILE_CHANGED }}
-              if: ${FILE_CHANGED}
-              run: echo steps.check-changes.outputs.FILE_CHANGED
+              if: steps.check-changes.outputs.file_changed == True
+              run: echo steps.check-changes.outputs.file_changed
