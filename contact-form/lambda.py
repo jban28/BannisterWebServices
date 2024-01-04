@@ -5,6 +5,7 @@ import boto3
 # Testing auto deployment
 
 
+
 ses_client = boto3.client('ses',
                           region_name = os.environ["SES_REGION"],
                           aws_access_key_id = os.environ["SES_KEY_ID"], 
