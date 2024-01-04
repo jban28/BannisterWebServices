@@ -21,5 +21,4 @@ jobs:
                 for file in "$ALL_CHANGED_FILES"; do
                   echo "$file was changed"
                 done
-                  # - name: Create zip archive
-                  #   run: zip -j lambdaAPI_login.zip ./lambda-api/login.py
+                ...
