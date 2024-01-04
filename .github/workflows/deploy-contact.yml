@@ -1,0 +1,14 @@
+name: deploy contact form to AWS lambda
+on:
+    push:
+        branches:
+            - move-contact-to-lambda
+jobs:
+    lambda:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            # - name: Create zip archive
+            #   run: zip -j lambdaAPI_login.zip ./lambda-api/login.py

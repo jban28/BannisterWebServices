@@ -10,10 +10,18 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    var form = new FormData(e.target)
+    var request = {
+        "name": form.get("name"),
+        "email": form.get("email"),
+        "subject": form.get("subject"),
+        "message": form.get("message")
+      }
+    console.log(request)
     setMessage("Processing ...")
-    fetch("https://enquiries.bannisterwebservices.co.uk/contact-form", {
+    fetch("https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form", {
       method: "POST",
-      body: new FormData(e.target)
+      body: JSON.stringify(request)
     })
     .then(response => {
       if (response.ok === true){setSubmitted(true)}
