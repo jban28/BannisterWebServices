@@ -47,5 +47,5 @@ jobs:
                 CHANGED: ${{ steps.check-changes.outputs.file_changed }}
               if: steps.check-changes.outputs.file_changed == true
               run: |
-                zip -j contact_form.zip ./contact-form/lambda.py
+                zip -j contact_form.zip ./contact-form/lambda_function.py
                 aws lambda update-function-code --function-name=BWS-contact --zip-file=fileb://contact_form.zip
