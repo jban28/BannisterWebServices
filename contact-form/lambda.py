@@ -2,6 +2,7 @@ import os
 import json
 import boto3
 
+# Testing auto deployment
 
 ses_client = boto3.client('ses',
                           region_name = os.environ["SES_REGION"],
