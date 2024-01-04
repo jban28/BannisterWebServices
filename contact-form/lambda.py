@@ -1,30 +1,26 @@
-from flask import Flask
-from flask import request
-from flask_cors import CORS
+import os
 import json
 import boto3
 
-config = json.load(open("./config.json", "r"))
-
 ses_client = boto3.client('ses',
-                          region_name=config["region_name"],
-                          aws_access_key_id=config["aws_access_key_id"], 
-                          aws_secret_access_key=config["aws_secret_access_key"]
+                          region_name = os.environ["SES_REGION"],
+                          aws_access_key_id = os.environ["SES_KEY_ID"], 
+                          aws_secret_access_key = os.environ["SES_KEY_VALUE"]
                           )
 
-application = Flask(__name__)
-
-CORS(application)
-
-@application.route("/contact-form", methods=["POST"])
-def contact_form ():
+def lambda_handler(event, context):
+    body = json.loads(event["body"])
+    
     try:
-        name = request.form["name"]
-        email = request.form["email"]
-        subject = request.form["subject"]
-        message = request.form["message"]
+        name = body["name"]
+        email = body["email"]
+        subject = body["subject"]
+        message = body["message"]
     except:
-        return "Missing fields", 422
+        return {
+        'statusCode': 422,
+        'body': json.dumps("Missing field(s)")
+    }
     
     try:
         ses_client.send_email(
@@ -81,10 +77,13 @@ def contact_form ():
             }
         )
     except:
-       return "service not available", 500
+       return {
+            'statusCode': 500,
+            'body': json.dumps("service not available")
+        }
 
     else:
-        return "sent", 200
-
-if __name__ == "__main__":
-    application.run()
+        return {
+            'statusCode': 200,
+            'body': json.dumps("sent")
+        }

@@ -1,0 +1,9 @@
+post https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form
+content-type: application/json
+
+{
+    "name": "test_name",
+    "email": "jd.bannister28@gmail.com",
+    "subject": "test_subject",
+    "message": "test_message"
+}
