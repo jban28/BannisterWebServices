@@ -23,6 +23,6 @@ jobs:
 
             - name: Upload changes
               env:
-                CHANGED: ${{ steps.changed-files.outputs.all_changed_files }}
+                CHANGED: ${{ steps.check-changes.outputs.file_changed }}
               if: steps.check-changes.outputs.file_changed
               run: echo ${CHANGED}
