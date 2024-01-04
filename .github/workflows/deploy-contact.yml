@@ -32,6 +32,7 @@ jobs:
                 CHANGED: ${{ steps.check-changes.outputs.file_changed }}
               run: echo ${CHANGED}
 
+
             - name: Configure AWS
               uses: aws-actions/configure-aws-credentials@v2
               if: steps.check-changes.outputs.file_changed == true
