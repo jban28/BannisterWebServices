@@ -2,7 +2,7 @@ name: deploy contact form to AWS lambda
 on:
     push:
         branches:
-            - move-contact-to-lambda
+            - main
 jobs:
    Deploy-Contact:
         runs-on: ubuntu-latest
