@@ -4,8 +4,7 @@ on:
         branches:
             - move-contact-to-lambda
 jobs:
-    lambda:
-        name: Lambda Deployment
+    check-changes:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -28,8 +27,17 @@ jobs:
                   echo file_changed=false >> $GITHUB_OUTPUT
                 fi
 
-            - name: Upload changes
+            - name: Configure AWS
+              uses: aws-actions/configure-aws-credentials@v2
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-region: eu-west-2
+
+            - name: Deploy changes
               env:
                 CHANGED: ${{ steps.check-changes.outputs.file_changed }}
               if: steps.check-changes.outputs.file_changed == true
-              run: 
+              run: |
+                zip -j contact_form.zip ./contact-form/lambda.py
+                aws lambda update-function-code --function-name=BWS-contact --zip-file=fileb://contact_form.zip
