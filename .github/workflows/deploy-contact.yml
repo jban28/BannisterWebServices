@@ -22,9 +22,9 @@ jobs:
               run: |
                 if [[ ${ALL_CHANGED_FILES[@]} =~ "contact-form/lambda.py" ]]
                 then 
-                  echo file_changed=true >> $GITHUB_OUTPUT
+                  echo file_changed=1 >> $GITHUB_OUTPUT
                 else 
-                  echo file_changed=false >> $GITHUB_OUTPUT
+                  echo file_changed=0 >> $GITHUB_OUTPUT
                 fi
 
             - name: test
@@ -44,7 +44,7 @@ jobs:
             - name: Deploy changes
               env:
                 CHANGED: ${{ steps.check-changes.outputs.file_changed }}
-              if: ${{ steps.check-changes.outputs.file_changed == "true" }}
+              if: steps.check-changes.outputs.file_changed == true
               run: |
                 zip -j contact_form.zip ./contact-form/lambda.py
                 aws lambda update-function-code --function-name=BWS-contact --zip-file=fileb://contact_form.zip
