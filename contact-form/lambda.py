@@ -16,10 +16,16 @@ def lambda_handler(event, context):
         email = body["email"]
         subject = body["subject"]
         message = body["message"]
+        
     except:
         return {
         'statusCode': 422,
-        'body': json.dumps("Missing field(s)")
+        'body': json.dumps("Missing field(s)"),
+        'headers': {
+                "Access-Control-Allow-Headers" : "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST"
+            }
     }
     
     try:
@@ -79,11 +85,21 @@ def lambda_handler(event, context):
     except:
        return {
             'statusCode': 500,
-            'body': json.dumps("service not available")
+            'body': json.dumps("service not available"),
+            'headers': {
+                "Access-Control-Allow-Headers" : "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST"
+            }
         }
 
     else:
         return {
             'statusCode': 200,
-            'body': json.dumps("sent")
+            'body': json.dumps("sent"),
+            'headers': {
+                "Access-Control-Allow-Headers" : "Content-Type",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "POST"
+            }
         }
