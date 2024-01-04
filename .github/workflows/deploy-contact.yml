@@ -23,4 +23,4 @@ jobs:
                   echo "File modified"
                 else
                   echo "file unchanged"
-                done
+                fi
