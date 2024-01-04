@@ -4,7 +4,7 @@ on:
         branches:
             - move-contact-to-lambda
 jobs:
-    check-changes:
+   Deploy-Contact:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
