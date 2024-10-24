@@ -47,7 +47,8 @@ const Portfolio = () => {
         "fa-brands fa-python",
         "fa-brands fa-html5",
         "fa-brands fa-css3-alt",
-        "fi fi-brands-bootstrap"
+        "fi fi-brands-bootstrap",
+        "fa-brands fa-wordpress",
       ]
     },
     {
@@ -71,18 +72,19 @@ const Portfolio = () => {
       ]
     },
     {
-      title: "Artists-API",
+      title: "Artist-API",
       subtitle: "Content Management System",
       description: "The Artist API functions as the content management system for mattpagett.co.uk. It is designed to be easily extended for additional artists to manage a portfolio website",
-      git: "https://github.com/jban28/ArtistAPI",
+      git: "https://github.com/jban28/ArtistAPI_v2",
       technical: [
-        "API built in Python using the Flask library",
+        "API built in Python hosted with AWS API Gateway and AWS Lambda",
         "Communicates with a Mongo Database and AWS S3 bucket to deliver content to users",
         "Uses JSON web tokens to authenticate users and authorise access to services",
       ],
       imageFile: "/artist-api.png",
       technologyLogos: [
-        "fa-brands fa-python"
+        "fa-brands fa-python",
+        "fa-brands fa-aws"
       ]
     },
     {
@@ -101,30 +103,13 @@ const Portfolio = () => {
     {
       title: "C++ Degree Module",
       subtitle: "Object Oriented Programming in the C++ Language",
-      git: "https://github.com/jban28/OOP",
+      git: "https://github.com/jban28/oop-in-c-plus-plus",
       description: "I completed an optional degree module on Object Oriented Programming using the C++ programming language ",
       technical: [
         "Assessment composed of 6 short assesments and a larger project",
         "Learnt the fundamental concepts of OOP and features of the C++ leanguage"
       ],
       imageFile: "/oop.png",
-    },
-    {
-      title: "Ben's Geology Blog",
-      subtitle: "Wordpress blog with bespoke theme",
-      git: "https://github.com/jban28/GeologyBen",
-      description: "***NOT YET PUBLISHED*** This will be a blog website for Ben Mayor to post about geology",
-      technical: [
-        "Wordpress based blog",
-        "Bespoke wordpress theme created using php"
-      ],
-      imageFile: "/geology-ben.png",
-      technologyLogos: [
-        "fa-brands fa-wordpress",
-        "fa-brands fa-php",
-        "fa-brands fa-html5",
-        "fa-brands fa-css3-alt"
-      ]
     }
   ]
 
