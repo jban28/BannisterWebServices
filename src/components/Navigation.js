@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 
 const Navigation = (props) => {
-  const [page, setPage] = useState(useLocation().pathname);
+  const routerLocation = useLocation()
   const [bgOpacity, setBgOpacity] = useState("00");
   const navbarRef = useRef();
 
@@ -29,13 +29,12 @@ const Navigation = (props) => {
     <Navbar id="navbar" sticky="top" className={"justify-content-center " + props.transition} ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
       <Nav justify variant="underline">
         <Nav.Item>
-          <Nav.Link active={page === "/"} href="/#navbar" onClick={() => setPage("home")}>Home</Nav.Link>
+          <Nav.Link active={routerLocation.pathname === "/"} href="/#navbar">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link active={page === "/portfolio"} href="/portfolio" onClick={() => setPage("portfolio")}>Portfolio</Nav.Link>
+          <Nav.Link active={routerLocation.pathname === "/portfolio"} href="/portfolio">Portfolio</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          {/*<Nav.Link active={page === "/about"} href="/about" onClick={() => setPage("about")}>About me</Nav.Link>*/}
           <Nav.Link href="https://blog.bannisterwebservices.co.uk">Blog</Nav.Link>
         </Nav.Item>
       </Nav>
