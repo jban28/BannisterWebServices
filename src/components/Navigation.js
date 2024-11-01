@@ -26,8 +26,8 @@ const Navigation = (props) => {
   }, [navbarRef])
 
   return(
-    <Navbar id="navbar"  sticky="top" className={"justify-content-center " + props.transition} ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
-      <Nav variant="underline">
+    <Navbar id="navbar" sticky="top" className={"justify-content-center " + props.transition} ref={navbarRef} style={{backgroundColor: '#ff2a00' + bgOpacity}}>
+      <Nav justify variant="underline">
         <Nav.Item>
           <Nav.Link active={page === "/"} href="/#navbar" onClick={() => setPage("home")}>Home</Nav.Link>
         </Nav.Item>

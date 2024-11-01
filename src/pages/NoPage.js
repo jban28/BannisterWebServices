@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/Button"
-import Navigation from "../components/Navigation";
+import Navigation from "../components/Navigation.js";
 
 const NoPage = () => {
   return (
