@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Portfolio from "./pages/Portfolio";
+import Layout from "./pages/Layout.jsx";
+import Home from "./pages/Home.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
 // import About from "./pages/About";
-import NoPage from "./pages/NoPage";
+import NoPage from "./pages/NoPage.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 

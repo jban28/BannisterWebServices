@@ -2,7 +2,7 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import Navigation from "../components/Navigation.js";
+import Navigation from "../components/Navigation.jsx";
 
 const Home = () => {
   const [submitted, setSubmitted] = useState(false);

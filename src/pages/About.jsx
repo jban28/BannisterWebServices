@@ -1,4 +1,4 @@
-import Navigation from "../components/Navigation.js";
+import Navigation from "../components/Navigation.jsx";
 
 const About = () => {
   const experience = [
