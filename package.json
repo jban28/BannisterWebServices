@@ -22,7 +22,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext js,jsx"
+    "lint": "npx prettier ./src -w && eslint . --ext js,jsx"
   },
   "eslintConfig": {
     "extends": [

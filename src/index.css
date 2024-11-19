@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+@import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
 
 :root {
   --theme-main: #ff2a00;
@@ -16,10 +16,11 @@
 
 body {
   color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: black; /*Fallback*/
   background-image: url("/background.png");
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -109,7 +110,7 @@ ul {
 .portfolio-icon {
   font-size: 24px;
   background-color: var(--theme-main);
-  background-blend-mode:multiply;
+  background-blend-mode: multiply;
   color: black;
   width: 36px;
   height: 36px;
@@ -145,7 +146,7 @@ i[class*=" fi-brands-"]:before {
   overflow: hidden;
 }
 
-.fill-height-with-nav-footer { 
+.fill-height-with-nav-footer {
   height: calc(100vh - 190px);
 }
 
@@ -198,11 +199,16 @@ i[class*=" fi-brands-"]:before {
   text-indent: calc(12px + 0.3ch);
 }
 
-
 @keyframes slide-in-from-left {
-  0% {left: -100vw;}
-  50% {left: +20px;}
-  100% {left: 0px;}
+  0% {
+    left: -100vw;
+  }
+  50% {
+    left: +20px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 .slide-in-from-left {
@@ -213,9 +219,15 @@ i[class*=" fi-brands-"]:before {
 }
 
 @keyframes slide-in-from-right {
-  0% {left: +100vw;}
-  50% {left: -20px;}
-  100% {left: 0px;}
+  0% {
+    left: +100vw;
+  }
+  50% {
+    left: -20px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 .slide-in-from-right {
@@ -226,14 +238,16 @@ i[class*=" fi-brands-"]:before {
 }
 
 @keyframes slide-up-from-bottom {
-  0% { 
+  0% {
     transform: translateY(calc(100vh - min(calc(100vh - 82px), 100vw)));
     margin-bottom: calc(100vh - min(calc(100vh - 82px), 100vw));
   }
 }
 
 @-webkit-keyframes slide-up-from-bottom {
-  0% { -webkit-transform: translateY(100vh - min(calc(100vh - 82px), 100vw));}
+  0% {
+    -webkit-transform: translateY(100vh - min(calc(100vh - 82px), 100vw));
+  }
 }
 
 .slide-up-from-bottom {
@@ -247,8 +261,12 @@ i[class*=" fi-brands-"]:before {
 }
 
 @keyframes fade-in {
-  from {opacity: 0%;}
-  to {opacity: 100%;}
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .fade-in {
@@ -272,7 +290,8 @@ i[class*=" fi-brands-"]:before {
   visibility: hidden;
   position: absolute;
   font-size: small;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   top: 120%;
   left: 50%;
   margin-left: -43px;
@@ -292,6 +311,6 @@ i[class*=" fi-brands-"]:before {
   border-color: transparent transparent white transparent;
 }
 
-.brand-icon:hover .brand-icon-tooltip{
+.brand-icon:hover .brand-icon-tooltip {
   visibility: visible;
 }

@@ -1,15 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 // import About from "./pages/About";
 import NoPage from "./pages/NoPage.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 export default function App() {
   return (
@@ -26,9 +24,9 @@ export default function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
