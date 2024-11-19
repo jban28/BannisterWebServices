@@ -2,6 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import Navigation from "../components/Navigation.jsx";
+import WelcomeBox from "../components/WelcomeBox/WelcomeBox.jsx";
 
 const Home = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -40,6 +41,7 @@ const Home = () => {
 
   return (
     <>
+      <WelcomeBox></WelcomeBox>
       <div className="fill-height-with-nav-square">
         <div className="welcome-box vertical-center">
           <h1>
