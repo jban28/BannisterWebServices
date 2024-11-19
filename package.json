@@ -9,6 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@vitejs/plugin-react": "^4.3.3",
     "bootstrap": "^5.3.0",
+    "eslint-config-react-app": "^7.0.1",
+    "postcss-nested": "^7.0.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
@@ -19,13 +21,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "postcss-nested": {}
+    }
   },
   "browserslist": {
     "production": [
@@ -40,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.57.1",
     "prettier": "^3.3.3",
     "react-router-dom": "^6.14.1",
     "vite-plugin-eslint": "^1.8.1"
