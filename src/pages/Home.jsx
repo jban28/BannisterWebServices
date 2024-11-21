@@ -1,12 +1,14 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navigation from "../components/Navigation/Navigation.jsx";
 import WelcomeBox from "../components/WelcomeBox/WelcomeBox.jsx";
 
 const Home = () => {
   const [submitted, setSubmitted] = useState(false);
   const [message, setMessage] = useState("Submit");
+  const [navbarOpacity, setNavbarOpacity] = useState(0);
+  const navbarRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,11 +41,24 @@ const Home = () => {
       });
   };
 
+  const handleScroll = () => {
+    const yView = navbarRef.current.getBoundingClientRect().y;
+    const yScroll = window.scrollY;
+    setNavbarOpacity(yScroll / (yView + yScroll));
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [navbarRef]);
+
   return (
     <>
       <WelcomeBox />
 
-      <Navigation />
+      <Navigation ref={navbarRef} opacity={navbarOpacity} />
 
       <div className="bg-white">
         <div className="fix-width welcome-body">

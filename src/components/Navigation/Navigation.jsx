@@ -1,36 +1,19 @@
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { forwardRef } from "react";
 import "./Navigation.css";
 
-const Navigation = (props) => {
+const Navigation = forwardRef(function ({ opacity = 1 }, ref) {
   const routerLocation = useLocation();
-  const [bgOpacity, setBgOpacity] = useState(1);
-  const navbarRef = useRef();
-
-  const handleScroll = () => {
-    const yView = navbarRef.current.getBoundingClientRect().y;
-    const yScroll = window.scrollY;
-    const newBgOpacity = yScroll / (yView + yScroll);
-    setBgOpacity(newBgOpacity);
-  };
-
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [navbarRef]);
 
   return (
     <Navbar
       id="navbar"
       sticky="top"
-      className={"justify-content-center " + props.transition}
-      ref={navbarRef}
-      style={{ backgroundColor: `rgba(255, 42, 0, ${bgOpacity})` }}
+      className="justify-content-center"
+      style={{ backgroundColor: `rgba(255, 42, 0, ${opacity})` }}
+      ref={ref}
     >
       <Nav justify variant="underline">
         <Nav.Item>
@@ -54,6 +37,6 @@ const Navigation = (props) => {
       </Nav>
     </Navbar>
   );
-};
+});
 
 export default Navigation;
