@@ -2,12 +2,15 @@
   padding: 24px 36px;
   margin: auto;
   width: min-content;
-  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .welcome-box__message {
   text-align: left;
-  perspective: 1000px;
+  /* perspective: 1000px; */
+  margin: none;
 }
 
 .welcome-box__message--highlight {
@@ -16,15 +19,23 @@
   margin-block: 6px;
   margin-inline: -12px;
   display: inline-block;
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", monospace;
   font-weight: bold;
   font-size: 1.5em;
-  animation: flip-in 0.5s;
-  transform-style: preserve-3d;
 }
 
 .welcome-box__message--highlight::first-letter {
   color: black;
+}
+
+.welcome-box__message--highlight.show {
+  animation: flip-in 0.5s;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg);
+}
+
+.welcome-box__message--highlight.wait {
+  transform: rotateX(90deg);
 }
 
 @keyframes flip-in {

@@ -159,105 +159,11 @@ i[class*=" fi-brands-"]:before {
   margin-bottom: 0px;
 }
 
-.welcome-body {
-  padding: 48px;
-  width: 100%;
-  font-size: large;
-  margin: 0px;
-}
-
-.welcome-box {
-  text-align: left;
-  margin: 12px 12px;
-  display: inline-block;
-}
-
 @media screen and (min-width: 800px) {
   .fix-width {
     width: 752px;
     margin: auto;
   }
-}
-
-.welcome-line-logo {
-  font-size: min(13vw, 13vh);
-  font-family: "Roboto Mono";
-  font-weight: bold;
-  background-color: var(--theme-main);
-  display: inline-block;
-  margin: 5px 0px;
-  padding: 6px 12px;
-}
-
-.welcome-line-logo::first-letter {
-  color: black;
-}
-
-.welcome-line {
-  font-size: min(7vw, 7vh);
-  display: inline-block;
-  text-indent: calc(12px + 0.3ch);
-}
-
-@keyframes slide-in-from-left {
-  0% {
-    left: -100vw;
-  }
-  50% {
-    left: +20px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-.slide-in-from-left {
-  position: relative;
-  left: 0px;
-  animation: slide-in-from-left 4s;
-  -webkit-animation: slide-in-from-left 4s; /* Safari and Chrome */
-}
-
-@keyframes slide-in-from-right {
-  0% {
-    left: +100vw;
-  }
-  50% {
-    left: -20px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-.slide-in-from-right {
-  position: relative;
-  left: 0px;
-  animation: slide-in-from-right 4s;
-  -webkit-animation: slide-in-from-right 4s; /* Safari and Chrome */
-}
-
-@keyframes slide-up-from-bottom {
-  0% {
-    transform: translateY(calc(100vh - min(calc(100vh - 82px), 100vw)));
-    margin-bottom: calc(100vh - min(calc(100vh - 82px), 100vw));
-  }
-}
-
-@-webkit-keyframes slide-up-from-bottom {
-  0% {
-    -webkit-transform: translateY(100vh - min(calc(100vh - 82px), 100vw));
-  }
-}
-
-.slide-up-from-bottom {
-  transform: translateY(0vh);
-  -webkit-transform: translateY(0vh);
-  margin-bottom: 0px;
-  animation: slide-up-from-bottom 2s;
-  -webkit-animation: slide-up-from-bottom 2s; /* Safari and Chrome */
-  animation-delay: 2s;
-  animation-fill-mode: backwards;
 }
 
 @keyframes fade-in {
@@ -313,4 +219,11 @@ i[class*=" fi-brands-"]:before {
 
 .brand-icon:hover .brand-icon-tooltip {
   visibility: visible;
+}
+
+.welcome-body {
+  padding: 48px;
+  width: 100%;
+  font-size: large;
+  margin: 0px;
 }

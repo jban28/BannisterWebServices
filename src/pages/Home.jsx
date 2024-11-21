@@ -41,28 +41,9 @@ const Home = () => {
 
   return (
     <>
-      <WelcomeBox></WelcomeBox>
-      <div className="fill-height-with-nav-square">
-        <div className="welcome-box vertical-center">
-          <h1>
-            <span className="welcome-line slide-in-from-left">Welcome to </span>
-            <br />
-            <span className="welcome-line-logo slide-in-from-right">
-              Bannister{" "}
-            </span>
-            <br />
-            <span className="welcome-line-logo slide-in-from-left">Web </span>
-            <br />
-            <span className="welcome-line-logo slide-in-from-right">
-              Services
-            </span>
-            <br />
-            <span className="welcome-line slide-in-from-left">.co.uk</span>
-          </h1>
-        </div>
-      </div>
+      <WelcomeBox />
 
-      <Navigation transition="slide-up-from-bottom" />
+      <Navigation />
 
       <div className="bg-white">
         <div className="fix-width welcome-body">
