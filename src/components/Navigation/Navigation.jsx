@@ -2,33 +2,23 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import "./Navigation.css";
 
 const Navigation = (props) => {
   const routerLocation = useLocation();
-  const [bgOpacity, setBgOpacity] = useState("00");
+  const [bgOpacity, setBgOpacity] = useState(1);
   const navbarRef = useRef();
 
-  let handleScroll = () => {
-    let navbarMaxTopValue = Math.min(
-      window.innerHeight -
-        navbarRef.current.getBoundingClientRect().height -
-        24,
-      window.innerWidth,
-    );
-    let navbarCurrentTopValue = navbarRef.current.getBoundingClientRect().top;
-    let bgOpacityDecimal = Math.round(
-      255 * Math.min(1 - navbarCurrentTopValue / navbarMaxTopValue, 1),
-    );
-    if (bgOpacityDecimal < 16) {
-      setBgOpacity("0" + bgOpacityDecimal.toString(16));
-    } else {
-      setBgOpacity(bgOpacityDecimal.toString(16));
-    }
+  const handleScroll = () => {
+    const yView = navbarRef.current.getBoundingClientRect().y;
+    const yScroll = window.scrollY;
+    const newBgOpacity = yScroll / (yView + yScroll);
+    setBgOpacity(newBgOpacity);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
     handleScroll();
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -40,7 +30,7 @@ const Navigation = (props) => {
       sticky="top"
       className={"justify-content-center " + props.transition}
       ref={navbarRef}
-      style={{ backgroundColor: "#ff2a00" + bgOpacity }}
+      style={{ backgroundColor: `rgba(255, 42, 0, ${bgOpacity})` }}
     >
       <Nav justify variant="underline">
         <Nav.Item>

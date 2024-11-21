@@ -1,7 +1,7 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import Navigation from "../components/Navigation.jsx";
+import Navigation from "../components/Navigation/Navigation.jsx";
 import WelcomeBox from "../components/WelcomeBox/WelcomeBox.jsx";
 
 const Home = () => {

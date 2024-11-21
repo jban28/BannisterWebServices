@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Project from "../components/Project.jsx";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Navigation from "../components/Navigation.jsx";
+import Navigation from "../components/Navigation/Navigation.jsx";
 
 const Portfolio = () => {
   const projectList = [

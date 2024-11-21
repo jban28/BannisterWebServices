@@ -9,11 +9,6 @@
   --bs-link-hover-color: white;
 }
 
-.nav-link {
-  cursor: pointer;
-  --bs-nav-link-font-weight: 700;
-}
-
 body {
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -24,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  min-width: min-content;
 }
 
 p {
