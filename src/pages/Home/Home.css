@@ -1,12 +1,28 @@
-.homepage__intro-text {
+.intro__text {
   margin-inline: auto;
   max-width: 752px;
   font-size: large;
   margin-bottom: 48px;
 }
 
-.homepage__intro-box {
+.intro__container {
   background-color: white;
   color: black;
   padding: 48px;
+}
+
+.brand__container {
+  background-color: var(--theme-main);
+  padding-block: 24px;
+  padding-inline: 48px;
+}
+
+.brand__bar {
+  max-width: 752px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 36px;
 }

@@ -1,0 +1,34 @@
+.brand__icon:hover {
+  scale: 1.2;
+}
+
+.brand__tooltip {
+  color: black;
+  background-color: white;
+  visibility: hidden;
+  position: absolute;
+  font-size: small;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  top: 120%;
+  left: 50%;
+  margin-left: -43px;
+  padding: 6px;
+  border-radius: 3px;
+  width: 86px;
+}
+
+.brand__tooltip::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.brand__icon:hover .brand__tooltip {
+  visibility: visible;
+}

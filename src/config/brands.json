@@ -1,0 +1,13 @@
+[
+  { "id": "html5", "label": "HTML 5" },
+  { "id": "css3-alt", "label": "CSS 3" },
+  { "id": "square-js", "label": "JavaScript" },
+  { "id": "vuejs", "label": "Vue JS" },
+  { "id": "react", "label": "React JS" },
+  { "id": "python", "label": "Python" },
+  { "id": "php", "label": "PHP" },
+  { "id": "wordpress", "label": "Wordpress" },
+  { "id": "bootstrap", "label": "Bootstrap" },
+  { "id": "sass", "label": "SASS" },
+  { "id": "github", "label": "GitHub" }
+]

@@ -3,7 +3,9 @@ import Button from "react-bootstrap/Button";
 import { useState, useRef, useEffect } from "react";
 import Navigation from "../../components/Navigation/Navigation.jsx";
 import WelcomeBox from "../../components/WelcomeBox/WelcomeBox.jsx";
+import BrandIcon from "../../components/BrandIcon/BrandIcon.jsx";
 import "./Home.css";
+import arrBrands from "../../config/brands.json";
 
 const Home = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -61,8 +63,8 @@ const Home = () => {
 
       <Navigation ref={navbarRef} opacity={navbarOpacity} />
 
-      <div className="homepage__intro-box">
-        <p className="homepage__intro-text">
+      <div className="intro__container">
+        <p className="intro__text">
           I am James Bannister, an aspiring developer. I established Bannister
           Web Services as a way for me to develop my programming skills and
           showcase my work. I provide free web and software development services
@@ -72,42 +74,12 @@ const Home = () => {
         <Button href="/portfolio">View my portfolio</Button>
       </div>
 
-      <div className="bg-theme py-3">
-        <h1 className="my-0 icon-bar">
-          <i className="brand-icon fa-brands fa-html5">
-            <span className="brand-icon-tooltip">HTML5</span>
-          </i>
-          <i className="brand-icon fa-brands fa-css3-alt">
-            <span className="brand-icon-tooltip">CSS3</span>
-          </i>
-          <i className="brand-icon fa-brands fa-square-js">
-            <span className="brand-icon-tooltip">JavaScript</span>
-          </i>
-          <i className="brand-icon fa-brands fa-vuejs">
-            <span className="brand-icon-tooltip">VueJS</span>
-          </i>
-          <i className="brand-icon fa-brands fa-react">
-            <span className="brand-icon-tooltip">ReactJS</span>
-          </i>
-          <i className="brand-icon fa-brands fa-python">
-            <span className="brand-icon-tooltip">Python</span>
-          </i>
-          <i className="brand-icon fa-brands fa-php">
-            <span className="brand-icon-tooltip">PHP</span>
-          </i>
-          <i className="brand-icon fa-brands fa-wordpress">
-            <span className="brand-icon-tooltip">Wordpress</span>
-          </i>
-          <i className="brand-icon fa-brands fa-bootstrap">
-            <span className="brand-icon-tooltip">Bootstrap</span>
-          </i>
-          <i className="brand-icon fa-brands fa-sass">
-            <span className="brand-icon-tooltip">SASS</span>
-          </i>
-          <i className="brand-icon fa-brands fa-github">
-            <span className="brand-icon-tooltip">GitHub</span>
-          </i>
-        </h1>
+      <div className="brand__container">
+        <div className="brand__bar">
+          {arrBrands.map(({ id, label }) => (
+            <BrandIcon key={id} id={id} label={label} />
+          ))}
+        </div>
       </div>
 
       {!submitted && (
