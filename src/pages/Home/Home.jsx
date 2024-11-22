@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 import { useState, useRef, useEffect } from "react";
-import Footer from "../../components/Footer.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 import Navigation from "../../components/Navigation/Navigation.jsx";
 import WelcomeBox from "../../components/WelcomeBox/WelcomeBox.jsx";
 import BrandIcon from "../../components/BrandIcon/BrandIcon.jsx";

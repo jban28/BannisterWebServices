@@ -33,7 +33,7 @@
   "postcss": {
     "map": false,
     "plugins": {
-      "postcss-nesting": { }
+      "postcss-nesting": {}
     }
   },
   "browserslist": {

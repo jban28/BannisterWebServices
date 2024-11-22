@@ -3,7 +3,7 @@ import Project from "../components/Project.jsx";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navigation from "../components/Navigation/Navigation.jsx";
-import Footer from "../components/Footer.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 
 const Portfolio = () => {
   const projectList = [
