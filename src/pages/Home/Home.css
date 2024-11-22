@@ -33,3 +33,8 @@
 .homepage__container--theme {
   background-color: var(--theme-main);
 }
+
+.homepage__content {
+  max-width: 752px;
+  margin-inline: auto;
+}

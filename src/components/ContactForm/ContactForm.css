@@ -10,18 +10,14 @@
   vertical-align: text-top;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .contact-form__fail-message {
   color: red;
   margin-bottom: 12px;
+}
+
+.contact-form__form-group {
+  text-align: left;
+  margin-bottom: 24px;
 }
 
 .contact-form__confirmation-text {
@@ -31,12 +27,11 @@
   margin-bottom: 0;
 }
 
-.contact-form__form {
-  margin-inline: auto;
-  max-width: 752px;
-}
-
-.contact-form__form-group {
-  text-align: left;
-  margin-bottom: 24px;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
