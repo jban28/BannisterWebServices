@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Navigation from "../components/Navigation/Navigation.jsx";
+import Footer from "../components/Footer.jsx";
 
 const NoPage = () => {
   return (
@@ -14,6 +15,7 @@ const NoPage = () => {
           <Button href="/">Return to Homepage</Button>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

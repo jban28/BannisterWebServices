@@ -3,6 +3,7 @@ import Project from "../components/Project.jsx";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navigation from "../components/Navigation/Navigation.jsx";
+import Footer from "../components/Footer.jsx";
 
 const Portfolio = () => {
   const projectList = [
@@ -127,6 +128,7 @@ const Portfolio = () => {
           ))}
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };
