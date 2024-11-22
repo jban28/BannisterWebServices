@@ -1,0 +1,42 @@
+.contact-form__spinner {
+  border: 0.2em solid white;
+  border-top: 0.2em solid #888888;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  animation: spin 2s linear infinite;
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: text-top;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-form__fail-message {
+  color: red;
+  margin-bottom: 12px;
+}
+
+.contact-form__confirmation-text {
+  margin-inline: auto;
+  max-width: 752px;
+  font-size: large;
+  margin-bottom: 0;
+}
+
+.contact-form__form {
+  margin-inline: auto;
+  max-width: 752px;
+}
+
+.contact-form__form-group {
+  text-align: left;
+  margin-bottom: 24px;
+}

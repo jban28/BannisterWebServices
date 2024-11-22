@@ -33,7 +33,7 @@
   "postcss": {
     "map": false,
     "plugins": {
-      "postcss-nested": {}
+      "postcss-nesting": { }
     }
   },
   "browserslist": {
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.1",
+    "postcss-nesting": "^13.0.1",
     "prettier": "^3.3.3",
     "react-router-dom": "^6.14.1",
     "vite-plugin-eslint": "^1.8.1"

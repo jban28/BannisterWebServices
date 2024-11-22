@@ -26,17 +26,6 @@ p {
   margin-bottom: 24px;
 }
 
-form {
-  padding: 24px;
-}
-
-.form-group {
-  text-align: left;
-  margin: auto;
-  max-width: 500px;
-  margin-bottom: 24px;
-}
-
 h2 {
   font-size: 1.25rem;
 }
@@ -170,11 +159,4 @@ i[class*=" fi-brands-"]:before {
 .fade-in {
   animation: fade-in 2s;
   animation-fill-mode: backwards;
-}
-
-.welcome-body {
-  padding: 48px;
-  width: 100%;
-  font-size: large;
-  margin: 0px;
 }

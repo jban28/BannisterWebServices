@@ -11,12 +11,6 @@
   padding: 48px;
 }
 
-.brand__container {
-  background-color: var(--theme-main);
-  padding-block: 24px;
-  padding-inline: 48px;
-}
-
 .brand__bar {
   max-width: 752px;
   margin-inline: auto;
@@ -25,4 +19,17 @@
   flex-wrap: wrap;
   gap: 24px;
   font-size: 36px;
+}
+
+.homepage__container {
+  padding: 48px;
+}
+
+.homepage__container--white {
+  background-color: white;
+  color: black;
+}
+
+.homepage__container--theme {
+  background-color: var(--theme-main);
 }

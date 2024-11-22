@@ -1,48 +1,15 @@
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState, useRef, useEffect } from "react";
 import Navigation from "../../components/Navigation/Navigation.jsx";
 import WelcomeBox from "../../components/WelcomeBox/WelcomeBox.jsx";
 import BrandIcon from "../../components/BrandIcon/BrandIcon.jsx";
+import ContactForm from "../../components/ContactForm/ContactForm.jsx";
 import "./Home.css";
 import arrBrands from "../../config/brands.json";
 
 const Home = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [message, setMessage] = useState("Submit");
   const [navbarOpacity, setNavbarOpacity] = useState(0);
   const navbarRef = useRef();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    var form = new FormData(e.target);
-    var request = {
-      name: form.get("name"),
-      email: form.get("email"),
-      subject: form.get("subject"),
-      message: form.get("message"),
-    };
-    console.log(request);
-    setMessage("Processing ...");
-    fetch(
-      "https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form",
-      {
-        method: "POST",
-        body: JSON.stringify(request),
-      },
-    )
-      .then((response) => {
-        if (response.ok === true) {
-          setSubmitted(true);
-        } else {
-          throw new Error("Service not available");
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-        setMessage("Submission failed, click to try again.");
-      });
-  };
 
   const handleScroll = () => {
     const yView = navbarRef.current.getBoundingClientRect().y;
@@ -63,7 +30,7 @@ const Home = () => {
 
       <Navigation ref={navbarRef} opacity={navbarOpacity} />
 
-      <div className="intro__container">
+      <div className="homepage__container homepage__container--white">
         <p className="intro__text">
           I am James Bannister, an aspiring developer. I established Bannister
           Web Services as a way for me to develop my programming skills and
@@ -74,70 +41,16 @@ const Home = () => {
         <Button href="/portfolio">View my portfolio</Button>
       </div>
 
-      <div className="brand__container">
+      <div className="homepage__container homepage__container--theme">
         <div className="brand__bar">
           {arrBrands.map(({ id, label }) => (
             <BrandIcon key={id} id={id} label={label} />
           ))}
         </div>
       </div>
-
-      {!submitted && (
-        <Form onSubmit={handleSubmit} acceptCharset="utf-8">
-          <h1>Contact me</h1>
-          <Form.Group className="form-group">
-            <Form.Label htmlFor="name">Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter your name"
-              name="name"
-              id="name"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="form-group">
-            <Form.Label htmlFor="email">Email Address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter your email"
-              name="email"
-              id="email"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="form-group">
-            <Form.Label htmlFor="subject">Subject</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Subject"
-              name="subject"
-              id="subject"
-              required
-            />
-          </Form.Group>
-          <Form.Group className="form-group">
-            <Form.Label htmlFor="message">Message</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={5}
-              placeholder="Enter message"
-              name="message"
-              id="subject"
-              required
-            />
-          </Form.Group>
-          <div id="response"></div>
-          <Button type="submit">{message}</Button>
-        </Form>
-      )}
-
-      {submitted && (
-        <div className="fix-width welcome-body">
-          Thankyou for contacting Bannister Web Services. You will recieve an
-          Email confirmation of your message. I will respond to your message as
-          soon as possible.
-        </div>
-      )}
+      <div className="homepage__container">
+        <ContactForm />
+      </div>
     </>
   );
 };
