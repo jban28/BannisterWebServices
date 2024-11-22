@@ -15,7 +15,6 @@ export default function App() {
         <Route index path="/" element={<Home />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="*" element={<NoPage />} />
-        {/* <Route path="/" element={<Layout />}> */}
       </Routes>
     </BrowserRouter>
   );
