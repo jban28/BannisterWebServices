@@ -1,0 +1,17 @@
+.portfolio {
+  display: grid;
+  gap: 24px;
+  margin: 24px;
+}
+
+@media screen and (min-width: 780px) {
+  .portfolio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

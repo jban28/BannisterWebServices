@@ -2,27 +2,31 @@ import Card from "react-bootstrap/Card";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
+import "./Project.css";
 
 const Project = (props) => {
   const [section, setSection] = useState("description");
 
   return (
     <>
-      <Card>
+      <Card className="project-card">
         <a href={props.data.link}>
           <Card.Img
             variant="top"
             src={"/portfolio-images" + props.data.imageFile}
             alt={props.data.title}
+            className="project-card__img"
           ></Card.Img>
-          <Card.ImgOverlay>
+          <Card.ImgOverlay className="project-card__img-overlay">
             {props.data.technologyLogos?.map((logo, index) => (
-              <i key={index} className={"portfolio-icon " + logo}></i>
+              <i key={index} className={`project-card__icon ${logo}`}></i>
             ))}
           </Card.ImgOverlay>
           <Card.Title>{props.data.title}</Card.Title>
         </a>
-        <Card.Subtitle>{props.data.subtitle}</Card.Subtitle>
+        <Card.Subtitle className="project-card__subtitle">
+          {props.data.subtitle}
+        </Card.Subtitle>
         <Nav
           variant="tabs"
           className="justify-content-center"
@@ -32,7 +36,7 @@ const Project = (props) => {
             <Nav.Link
               as="div"
               active={section === "description"}
-              className="bg-theme"
+              className="project-card__nav-link"
               onClick={() => setSection("description")}
             >
               Description
@@ -42,7 +46,7 @@ const Project = (props) => {
             <Nav.Link
               as="div"
               active={section === "technical"}
-              className="bg-theme"
+              className="project-card__nav-link"
               onClick={() => setSection("technical")}
             >
               Technical Details
@@ -51,7 +55,9 @@ const Project = (props) => {
         </Nav>
         <Card.Body>
           {section === "description" && (
-            <Card.Text>{props.data.description}</Card.Text>
+            <Card.Text className="project-card__text">
+              {props.data.description}
+            </Card.Text>
           )}
           {section === "technical" && (
             <>
@@ -65,7 +71,7 @@ const Project = (props) => {
                   <img
                     height="26px"
                     width="26px"
-                    className="git-icon"
+                    className="project-card__git-button"
                     src="/github-mark-white.svg"
                     alt="git"
                   />

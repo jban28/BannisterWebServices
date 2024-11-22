@@ -11,7 +11,7 @@ const Navigation = forwardRef(function ({ opacity = 1 }, ref) {
     <Navbar
       id="navbar"
       sticky="top"
-      className="justify-content-center"
+      className="justify-content-center navigation"
       style={{ backgroundColor: `rgba(255, 42, 0, ${opacity})` }}
       ref={ref}
     >
