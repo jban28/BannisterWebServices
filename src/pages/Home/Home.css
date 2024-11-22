@@ -1,0 +1,12 @@
+.homepage__intro-text {
+  margin-inline: auto;
+  max-width: 752px;
+  font-size: large;
+  margin-bottom: 48px;
+}
+
+.homepage__intro-box {
+  background-color: white;
+  color: black;
+  padding: 48px;
+}

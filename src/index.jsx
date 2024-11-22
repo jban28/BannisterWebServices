@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout.jsx";
-import Home from "./pages/Home.jsx";
+import Home from "./pages/Home/Home.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 // import About from "./pages/About";
 import NoPage from "./pages/NoPage.jsx";

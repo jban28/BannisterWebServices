@@ -1,8 +1,9 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState, useRef, useEffect } from "react";
-import Navigation from "../components/Navigation/Navigation.jsx";
-import WelcomeBox from "../components/WelcomeBox/WelcomeBox.jsx";
+import Navigation from "../../components/Navigation/Navigation.jsx";
+import WelcomeBox from "../../components/WelcomeBox/WelcomeBox.jsx";
+import "./Home.css";
 
 const Home = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -60,17 +61,15 @@ const Home = () => {
 
       <Navigation ref={navbarRef} opacity={navbarOpacity} />
 
-      <div className="bg-white">
-        <div className="fix-width welcome-body">
-          <p className="">
-            I am James Bannister, an aspiring developer. I established Bannister
-            Web Services as a way for me to develop my programming skills and
-            showcase my work. I provide free web and software development
-            services on a casual basis and will consider taking on any project
-            that I think I am capable of completing.
-          </p>
-          <Button href="/portfolio">View my portfolio</Button>
-        </div>
+      <div className="homepage__intro-box">
+        <p className="homepage__intro-text">
+          I am James Bannister, an aspiring developer. I established Bannister
+          Web Services as a way for me to develop my programming skills and
+          showcase my work. I provide free web and software development services
+          on a casual basis and will consider taking on any project that I think
+          I am capable of completing.
+        </p>
+        <Button href="/portfolio">View my portfolio</Button>
       </div>
 
       <div className="bg-theme py-3">
