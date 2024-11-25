@@ -2,9 +2,9 @@ import Card from "react-bootstrap/Card";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
-import "./Project.css";
+import "./ProjectCard.css";
 
-const Project = (props) => {
+const ProjectCard = (props) => {
   const [section, setSection] = useState("description");
 
   return (
@@ -86,4 +86,4 @@ const Project = (props) => {
   );
 };
 
-export default Project;
+export default ProjectCard;

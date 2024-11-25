@@ -1,4 +1,4 @@
-import Project from "../../components/Project/Project.jsx";
+import ProjectCard from "../../components/ProjectCard/ProjectCard.jsx";
 import Navigation from "../../components/Navigation/Navigation.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import arrProjectData from "../../config/projects.json";

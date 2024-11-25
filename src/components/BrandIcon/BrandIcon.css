@@ -1,8 +1,8 @@
-.brand__icon:hover {
+.brand-icon__icon:hover {
   scale: 1.2;
 }
 
-.brand__tooltip {
+.brand-icon__tooltip {
   color: black;
   background-color: white;
   visibility: hidden;
@@ -18,7 +18,7 @@
   width: 86px;
 }
 
-.brand__tooltip::before {
+.brand-icon__tooltip::before {
   content: " ";
   position: absolute;
   bottom: 100%; /* At the bottom of the tooltip */
@@ -29,6 +29,6 @@
   border-color: transparent transparent white transparent;
 }
 
-.brand__icon:hover .brand__tooltip {
+.brand-icon__icon:hover .brand-icon__tooltip {
   visibility: visible;
 }
