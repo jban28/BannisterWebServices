@@ -32,7 +32,7 @@ const Home = () => {
       <Navigation ref={navbarRef} opacity={navbarOpacity} />
 
       <div className="homepage__container homepage__container--white">
-        <p className="homepage__intro homepage--max-width">
+        <p className="homepage__intro homepage__max-width">
           I am James Bannister, an aspiring developer. I established Bannister
           Web Services as a way for me to develop my programming skills and
           showcase my work. I provide free web and software development services
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </div>
       <div className="homepage__container">
-        <ContactForm className="homepage--max-width" />
+        <ContactForm className="homepage__max-width" />
       </div>
 
       <Footer />

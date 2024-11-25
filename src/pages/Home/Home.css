@@ -28,7 +28,7 @@
   background-color: var(--theme-main);
 }
 
-.homepage--max-width {
+.homepage__max-width {
   max-width: 752px;
   margin-inline: auto;
 }
