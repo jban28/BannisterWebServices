@@ -1,0 +1,12 @@
+.no-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.no-page__container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,13 +1,14 @@
 import Button from "react-bootstrap/Button";
-import Navigation from "../components/Navigation/Navigation.jsx";
-import Footer from "../components/Footer/Footer.jsx";
+import Navigation from "../../components/Navigation/Navigation.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import "./NoPage.css";
 
 const NoPage = () => {
   return (
-    <>
+    <div className="no-page">
       <Navigation />
-      <div className="fill-height-with-nav-footer">
-        <div className="vertical-center">
+      <div className="no-page__container">
+        <div className="no-page__msg">
           <h1>Error 404</h1>
           <p>
             Page not found on this server. Please check the URL and start again
@@ -16,7 +17,7 @@ const NoPage = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
