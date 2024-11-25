@@ -17,7 +17,7 @@ const Navigation = forwardRef(function ({ opacity = 1 }, ref) {
     >
       <Nav justify variant="underline">
         <Nav.Item>
-          <Nav.Link active={routerLocation.pathname === "/"} href="/#navbar">
+          <Nav.Link active={routerLocation.pathname === "/"} href="/">
             Home
           </Nav.Link>
         </Nav.Item>
