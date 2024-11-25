@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </div>
       <div className="homepage__container">
-        <ContactForm className="homepage--max-width"/>
+        <ContactForm className="homepage--max-width" />
       </div>
 
       <Footer />
