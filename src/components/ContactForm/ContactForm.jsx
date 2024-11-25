@@ -36,7 +36,7 @@ const ContactForm = ({ className = "", style = {} }) => {
     };
     console.log(request);
     fetch(
-      "example", //"https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form",
+      "https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form",
       {
         method: "POST",
         body: JSON.stringify(request),
