@@ -10,7 +10,7 @@ const Portfolio = () => {
       <Navigation transition="fade-in" />
       <div className="portfolio">
         {arrProjectData.map((projectData, index) => (
-          <Project key={projectData.id} data={projectData}></Project>
+          <ProjectCard key={projectData.id} data={projectData}></ProjectCard>
         ))}
       </div>
       <Footer />
