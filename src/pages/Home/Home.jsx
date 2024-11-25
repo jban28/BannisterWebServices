@@ -32,7 +32,7 @@ const Home = () => {
       <Navigation ref={navbarRef} opacity={navbarOpacity} />
 
       <div className="homepage__container homepage__container--white">
-        <p className="intro__text">
+        <p className="homepage__intro homepage--max-width">
           I am James Bannister, an aspiring developer. I established Bannister
           Web Services as a way for me to develop my programming skills and
           showcase my work. I provide free web and software development services
@@ -43,14 +43,14 @@ const Home = () => {
       </div>
 
       <div className="homepage__container homepage__container--theme">
-        <div className="brand__bar">
+        <div className="homepage__brand-bar">
           {arrBrands.map(({ id, label }) => (
             <BrandIcon key={id} id={id} label={label} />
           ))}
         </div>
       </div>
       <div className="homepage__container">
-        <ContactForm />
+        <ContactForm className="homepage--max-width"/>
       </div>
 
       <Footer />
