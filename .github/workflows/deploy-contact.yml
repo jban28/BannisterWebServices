@@ -20,7 +20,7 @@ jobs:
                 ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
               # note: this is a bash script - could be put in separate .sh file
               run: |
-                if [[ ${ALL_CHANGED_FILES[@]} =~ "api/src/contact-form/lambda_function.py" ]]
+                if [[ ${ALL_CHANGED_FILES[@]} =~ "api/src/contact-form/POST/contact-form__POST.py" ]]
                 then 
                   echo file_changed=1 >> $GITHUB_OUTPUT
                 else 

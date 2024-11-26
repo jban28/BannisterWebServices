@@ -13,3 +13,10 @@ pages or components. All pages and components have a separate `.css` file and
 `.jsx` file, with the css imported into the `.jsx` file. CSS classes conform to
 the BEM syntax, where a block represents exactly one page or component, and 
 where a page or component contains only on block within it's `jsx`. 
+
+## API structure
+The API for this project is set up using AWS API gateway, which points to AWS
+Lambda functions. The naming convention for these Lambda end points is
+`bws--{route}_{subroute}--{HTTP-METHOD}`, corresponding to a file path in this repo
+of `/api/src/{route}/{subroute}/{HTTPMethod}/{route}_{subroute}--{HTTPMethod}.py`.
+Imported modules are packaged as a Lambda layer from `/api/requirements.txt`.
