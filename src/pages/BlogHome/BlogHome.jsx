@@ -7,9 +7,9 @@ const client = generateClient();
 const BlogHome = () => {
   return (
     <>
-        <Navigation  />
+      <Navigation />
     </>
-  )
+  );
 };
 
 export default BlogHome;

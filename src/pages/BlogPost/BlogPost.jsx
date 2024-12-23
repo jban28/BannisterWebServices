@@ -13,8 +13,7 @@ const BlogPost = () => {
       next: (data) => setPosts([...data.items]),
     });
   }, []);
-  
-  
+
   return (
     <>
       <Navigation />
@@ -25,8 +24,7 @@ const BlogPost = () => {
         ))}
       </ul>
     </>
-  )
-  
+  );
 };
 
 export default BlogPost;

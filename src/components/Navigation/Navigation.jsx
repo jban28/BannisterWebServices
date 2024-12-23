@@ -30,9 +30,7 @@ const Navigation = forwardRef(function ({ opacity = 1 }, ref) {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/blog">
-            Blog
-          </Nav.Link>
+          <Nav.Link href="/blog">Blog</Nav.Link>
         </Nav.Item>
       </Nav>
     </Navbar>
