@@ -5,7 +5,7 @@ const schema = a.schema({
     .model({
       title: a.string().required(),
       lastRevised: a.date().required(),
-      category: a.string().required().default('Uncategorized'),
+      category: a.string().default('Uncategorized'),
       tags: a.string().array(),
       summary: a.string(),
       content: a.string(),

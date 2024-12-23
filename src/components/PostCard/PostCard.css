@@ -1,0 +1,39 @@
+.post-card {
+  max-width: 752px;
+  margin: 24px;
+  padding: 24px;
+  background-color: white;
+  color: black;
+  border-radius: var(--bs-border-radius);
+  text-align: left;
+}
+
+.post-card__link {
+  text-decoration: none;
+  color: black;
+}
+
+.post-card__title:hover {
+  text-decoration: underline;
+}
+
+.post-card__icon {
+  margin-inline-end: 0.5rem;
+}
+
+.post-card__category {
+  display: inline-block;
+  color: black;
+  padding: 0 3px;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 0 0 3px;
+}
+
+.post-card__summary {
+  margin-top: 12px;
+}
+
+.post-card__details {
+  font-size: smaller;
+}

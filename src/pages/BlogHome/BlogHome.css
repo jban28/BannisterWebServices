@@ -1,0 +1,10 @@
+.blog-home__intro {
+  background-color: white;
+  color: black;
+  padding: 24px;
+}
+
+.blog-home__max-width {
+  max-width: 752px;
+  margin-inline: auto;
+}
