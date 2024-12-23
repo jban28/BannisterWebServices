@@ -1,0 +1,16 @@
+.post-data__icon {
+  margin-inline-end: 0.5rem;
+}
+
+.post-data__category {
+  display: inline-block;
+  color: black;
+  padding: 0 3px;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin: 0 0 3px;
+}
+
+.post-data__details {
+  font-size: smaller;
+}

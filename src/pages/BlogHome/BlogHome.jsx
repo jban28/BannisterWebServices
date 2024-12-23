@@ -1,5 +1,6 @@
 import { generateClient } from "aws-amplify/data";
 import Navigation from "../../components/Navigation/Navigation.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 import PostCard from "../../components/PostCard/PostCard.jsx";
 import "./BlogHome.css";
 
@@ -39,6 +40,7 @@ const BlogHome = () => {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 };
