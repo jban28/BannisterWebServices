@@ -8,6 +8,10 @@ import Home from "./pages/Home/Home.jsx";
 import Portfolio from "./pages/Portfolio/Portfolio.jsx";
 import NoPage from "./pages/NoPage/NoPage.jsx";
 import BlogPost from "./pages/BlogPost/BlogPost.jsx"
+import { Amplify } from "aws-amplify";
+import outputs from "/amplify_outputs.json";
+
+Amplify.configure(outputs);
 
 export default function App() {
   return (
