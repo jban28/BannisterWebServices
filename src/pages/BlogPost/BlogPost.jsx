@@ -21,9 +21,9 @@ const BlogPost = () => {
   useEffect(() => {
     const postId = routeParams.postId;
     console.log(postId);
-    getPost(postId).then((data) => {
-      console.log(data);
-      setPostData(data);
+    getPost(postId).then((response) => {
+      console.log(response);
+      setPostData(response.data);
     });
   }, [location]);
 
