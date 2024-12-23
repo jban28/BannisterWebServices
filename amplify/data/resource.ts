@@ -1,4 +1,4 @@
-import { a, defineData } from "@aws-amplify/backend";
+import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
 const schema = a.schema({
   blogPost: a
