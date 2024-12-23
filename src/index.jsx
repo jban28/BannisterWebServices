@@ -20,9 +20,8 @@ export default function App() {
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="blog" element={<BlogHome />}>
-          <Route path=":postId" element={<BlogPost />} />
-        </Route>
+        <Route path="blog" element={<BlogHome />} />
+        <Route path="blog/:postId" element={<BlogPost />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </BrowserRouter>
