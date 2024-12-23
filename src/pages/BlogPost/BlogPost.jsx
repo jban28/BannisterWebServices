@@ -1,5 +1,6 @@
 import { generateClient } from "aws-amplify/data";
 import { useState, useEffect } from "react";
+import Navigation from "../../components/Navigation/Navigation.jsx";
 import "./BlogPost.css";
 
 const client = generateClient();
@@ -15,11 +16,15 @@ const BlogPost = () => {
   
   
   return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.id}>{post.content}</li>
-      ))}
-    </ul>
+    <>
+      <Navigation />
+
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>{post.content}</li>
+        ))}
+      </ul>
+    </>
   )
   
 };
