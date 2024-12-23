@@ -25,3 +25,8 @@ yarn-error.log*
 # private data files
 config.json
 deployment.zip
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
