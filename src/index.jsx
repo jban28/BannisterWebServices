@@ -7,7 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Portfolio from "./pages/Portfolio/Portfolio.jsx";
 import NoPage from "./pages/NoPage/NoPage.jsx";
-import BlogPost from "./pages/BlogPost/BlogPost.jsx"
+import BlogPost from "./pages/BlogPost/BlogPost.jsx";
+import BlogHome from "./pages/BlogHome/BlogHome.jsx";
 import { Amplify } from "aws-amplify";
 import outputs from "/amplify_outputs.json";
 
@@ -20,7 +21,9 @@ export default function App() {
         <Route index path="/" element={<Home />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="*" element={<NoPage />} />
-        <Route path="blog" element={<BlogPost />} />
+        <Route path="blog" element={<BlogHome />} >
+          <Route path="*" element={<BlogPost />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,9 +1,10 @@
 import { generateClient } from "aws-amplify/data";
 import { useState, useEffect } from "react";
+import "./BlogPost.css";
 
 const client = generateClient();
 
-const BlogPost = ({ className = "", style = {} }) => {
+const BlogPost = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
