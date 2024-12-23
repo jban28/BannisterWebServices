@@ -9,9 +9,8 @@ import "./BlogPost.css";
 const client = generateClient();
 
 const BlogPost = () => {
-
-  const [date, category, arrTags] = ["date", 'category', ['tag 1', 'tag 2']]
-  const content = "# Heading"
+  const [date, category, arrTags] = ["date", "category", ["tag 1", "tag 2"]];
+  const content = "# Heading";
 
   return (
     <>
@@ -19,11 +18,9 @@ const BlogPost = () => {
       <article className="blog-post__post">
         <h1 className="blog-post__title">Title</h1>
         <PostData date={date} category={category} arrTags={arrTags} />
-        <Markdown className="blog-post__content">
-          {content}
-        </Markdown>
+        <Markdown className="blog-post__content">{content}</Markdown>
       </article>
-      <Footer/>
+      <Footer />
     </>
   );
 };
