@@ -10,26 +10,35 @@ import "./BlogPost.css";
 const client = generateClient();
 
 const getPost = async function (postId) {
-  return await client.models.blogPost.get({ id: postId });
+  const {data: postData, errors} = await client.models.blogPost.get({ id: postId });
+  if (!postData) {
+    throw "No data retrieved"
+  }
+  return postData
 };
 
 const BlogPost = () => {
   const [postData, setPostData] = useState({});
+  const [noPost, setNoPost] = useState(false);
 
   const routeParams = useParams();
 
   useEffect(() => {
     const postId = routeParams.postId;
-    console.log(postId);
-    getPost(postId).then((response) => {
-      console.log(response);
-      setPostData(response.data);
+    getPost(postId)
+    .then((postData) => {
+      setPostData(postData);
+      setNoPost(false);
+    })
+    .catch((err) => {
+      setNoPost(true);
     });
   }, [location]);
 
   return (
     <>
       <Navigation />
+      {!noPost ? 
       <article className="blog-post__post">
         <h1 className="blog-post__title">{postData.title}</h1>
         <PostData
@@ -39,7 +48,9 @@ const BlogPost = () => {
         />
         <Markdown className="blog-post__content">{postData.content}</Markdown>
       </article>
+      : <div className="blog-post__error">Post not found</div>}
       <Footer />
+      
     </>
   );
 };
