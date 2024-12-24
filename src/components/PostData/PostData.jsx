@@ -1,15 +1,16 @@
+import TextLoader from "../../components/TextLoader/TextLoader.jsx";
 import "./PostData.css";
 
 const PostData = ({ date, category, arrTags }) => {
   return (
     <div className="post-data">
       <div className="post-data__category post-data__details">
-        {category ?? "Uncategorized"}
+        {category || <TextLoader />}
       </div>
       <div className="post-data__date post-data__details">
         <time dateTime={date}>
           <i className="post-data__icon fa-regular fa-calendar"></i>
-          {date}
+          {date  || <TextLoader />}
         </time>
       </div>
 
@@ -21,7 +22,7 @@ const PostData = ({ date, category, arrTags }) => {
               {tag}
               {index != arrTags.length - 1 ? ", " : ""}
             </span>
-          ))}
+          )) || <TextLoader />}
       </div>
     </div>
   );

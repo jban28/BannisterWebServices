@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import PostData from "../../components/PostData/PostData.jsx";
+import TextLoader from "../../components/TextLoader/TextLoader.jsx";
 import "./BlogPost.css";
 import "highlight.js/styles/github.css";
 
@@ -41,7 +42,7 @@ const BlogPost = () => {
     <>
       {!noPost ? (
         <article className="blog-post__post">
-          <h1 className="blog-post__title">{postData.title}</h1>
+          <h1 className="blog-post__title">{postData.title || <TextLoader />}</h1>
           <PostData
             date={postData.lastRevised}
             category={postData.category}
