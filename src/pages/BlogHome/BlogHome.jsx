@@ -1,7 +1,5 @@
 import { generateClient } from "aws-amplify/data";
 import { useState, useEffect } from "react";
-import Navigation from "../../components/Navigation/Navigation.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
 import PostCard from "../../components/PostCard/PostCard.jsx";
 import "./BlogHome.css";
 
@@ -23,7 +21,6 @@ const BlogHome = () => {
   }, []);
   return (
     <>
-      <Navigation />
       <div className="blog-home__intro">
         <div className="blog-home__max-width">
           <h1>Welcome to the BWS Blog!</h1>
@@ -64,7 +61,6 @@ const BlogHome = () => {
           />
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -6,7 +6,6 @@ import "./NoPage.css";
 const NoPage = () => {
   return (
     <div className="no-page">
-      <Navigation />
       <div className="no-page__container">
         <div className="no-page__msg">
           <h1>Error 404</h1>
@@ -16,7 +15,6 @@ const NoPage = () => {
           <Button href="/">Return to Homepage</Button>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

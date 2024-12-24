@@ -4,6 +4,7 @@
   padding: 24px;
   margin: auto;
   text-align: start;
+  min-height: 100%;
 }
 
 .blog-post__content {
@@ -16,6 +17,7 @@
 
 .blog-post__error {
   padding: 24px;
+  min-height: 100%;
 }
 
 @media screen and (min-width: 800px) {

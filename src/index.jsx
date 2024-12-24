@@ -11,6 +11,8 @@ import BlogPost from "./pages/BlogPost/BlogPost.jsx";
 import BlogHome from "./pages/BlogHome/BlogHome.jsx";
 import { Amplify } from "aws-amplify";
 import outputs from "/amplify_outputs.json";
+import MainLayout from "./layouts/MainLayout/MainLayout.jsx";
+import HomeLayout from "./layouts/HomeLayout/HomeLayout.jsx";
 
 Amplify.configure(outputs);
 
@@ -18,11 +20,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="blog" element={<BlogHome />} />
-        <Route path="blog/:postId" element={<BlogPost />} />
-        <Route path="*" element={<NoPage />} />
+        <Route element={<HomeLayout />}>
+          <Route index path="/" element={<Home />} />
+        </Route>
+        <Route element={<MainLayout />}>
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="blog" element={<BlogHome />} />
+          <Route path="blog/:postId" element={<BlogPost />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

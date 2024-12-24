@@ -7,13 +7,11 @@ import "./Portfolio.css";
 const Portfolio = () => {
   return (
     <>
-      <Navigation transition="fade-in" />
       <div className="portfolio">
         {arrProjectData.map((projectData, index) => (
           <ProjectCard key={projectData.id} data={projectData}></ProjectCard>
         ))}
       </div>
-      <Footer />
     </>
   );
 };
