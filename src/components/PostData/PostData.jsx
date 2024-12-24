@@ -7,7 +7,7 @@ const PostData = ({ date, category, arrTags }) => {
         {category ?? "Uncategorized"}
       </div>
       <div className="post-data__date post-data__details">
-        <time datetime={date}>
+        <time dateTime={date}>
           <i className="post-data__icon fa-regular fa-calendar"></i>
           {date}
         </time>
