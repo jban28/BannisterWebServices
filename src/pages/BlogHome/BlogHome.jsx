@@ -13,7 +13,7 @@ const getPosts = async function () {
 };
 
 const BlogHome = () => {
-  const [posts, setPosts] = useState({});
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     getPosts().then((posts) => {
@@ -52,7 +52,7 @@ const BlogHome = () => {
             id="someID"
             title="example"
             date="23 December 2024"
-            summary={summaryExample}
+            summary="An example post summary"
             arrTags={["tag 1", "tag 2"]}
             category="Uncategorized"
           />
