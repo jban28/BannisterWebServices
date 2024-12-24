@@ -5,9 +5,21 @@ import PostCard from "../../components/PostCard/PostCard.jsx";
 import "./BlogHome.css";
 
 const client = generateClient();
-const summaryExample = `A summary of a blog post is a short decription of what the content is, or if that is not available then it is the first few characters of the content`;
+
+const getPosts = async function () {
+  const { data: posts, errors } = await client.models.blogPost.list();
+  return posts;
+};
 
 const BlogHome = () => {
+  const [posts, setPosts] = useState({});
+
+  useEffect(() => {
+    getPosts().then((posts) => {
+      console.log(posts);
+      setPosts(posts);
+    });
+  }, []);
   return (
     <>
       <Navigation />
@@ -25,6 +37,16 @@ const BlogHome = () => {
       </div>
       <div className="blog-home__post-list">
         <div className="blog-home__max-width">
+          {posts.map((post) => (
+            <PostCard
+              id={post.id}
+              title={post.title}
+              date={post.lastRevised}
+              summary={post.summary}
+              arrTags={post.tags}
+              category={post.category}
+            />
+          ))}
           <PostCard
             id="someID"
             title="example"
