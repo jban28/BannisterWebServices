@@ -12,19 +12,6 @@ import "highlight.js/styles/github.css";
 const client = generateClient();
 
 const getPost = async function (postId) {
-  // Test data
-  if (true) {
-    return {
-      id: "testid",
-      title: "Post title",
-      lastRevised: "2024-12-24",
-      category: "a category",
-      tags: ["tag1", "tag2"],
-      content:
-        "# hello \n some text \n ```js \n const something = function () { return 'hello'; } \n```",
-    };
-  }
-
   const { data: postData, errors } = await client.models.blogPost.get({
     id: postId,
   });
