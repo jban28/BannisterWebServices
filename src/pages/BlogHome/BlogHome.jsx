@@ -40,6 +40,7 @@ const BlogHome = () => {
         <div className="blog-home__max-width">
           {posts.map((post) => (
             <PostCard
+              key={post.id}
               id={post.id}
               title={post.title}
               date={post.lastRevised}

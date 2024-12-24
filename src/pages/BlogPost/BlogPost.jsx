@@ -33,7 +33,7 @@ const BlogPost = () => {
       <article className="blog-post__post">
         <h1 className="blog-post__title">{postData.title}</h1>
         <PostData
-          date={postData.date}
+          date={postData.lastRevised}
           category={postData.category}
           arrTags={postData.tags}
         />
