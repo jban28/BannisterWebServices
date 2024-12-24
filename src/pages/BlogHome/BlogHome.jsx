@@ -1,4 +1,5 @@
 import { generateClient } from "aws-amplify/data";
+import { useState, useEffect } from "react";
 import Navigation from "../../components/Navigation/Navigation.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import PostCard from "../../components/PostCard/PostCard.jsx";
