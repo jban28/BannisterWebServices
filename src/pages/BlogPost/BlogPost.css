@@ -10,6 +10,10 @@
   margin-top: 24px;
 }
 
+.blog-post__content code {
+  background-color: #dddddd;
+}
+
 .blog-post__error {
   padding: 24px;
 }
