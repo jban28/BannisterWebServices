@@ -10,19 +10,19 @@ const PostData = ({ date, category, arrTags }) => {
       <div className="post-data__date post-data__details">
         <time dateTime={date}>
           <i className="post-data__icon fa-regular fa-calendar"></i>
-          {date  || <TextLoader />}
+          {date || <TextLoader />}
         </time>
       </div>
 
       <div className="post-data__tag-list post-data__details">
         <i className="post-data__icon fa-solid fa-tag"></i>
-        {arrTags &&
+        {(arrTags &&
           arrTags.map((tag, index) => (
             <span key={tag} className="post-data__tag">
               {tag}
               {index != arrTags.length - 1 ? ", " : ""}
             </span>
-          )) || <TextLoader />}
+          ))) || <TextLoader />}
       </div>
     </div>
   );

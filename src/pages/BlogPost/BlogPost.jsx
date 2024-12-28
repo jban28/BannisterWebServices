@@ -42,7 +42,9 @@ const BlogPost = () => {
     <>
       {!noPost ? (
         <article className="blog-post__post">
-          <h1 className="blog-post__title">{postData.title || <TextLoader />}</h1>
+          <h1 className="blog-post__title">
+            {postData.title || <TextLoader />}
+          </h1>
           <PostData
             date={postData.lastRevised}
             category={postData.category}

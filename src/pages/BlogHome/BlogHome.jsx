@@ -1,6 +1,7 @@
 import { generateClient } from "aws-amplify/data";
 import { useState, useEffect } from "react";
 import PostCard from "../../components/PostCard/PostCard.jsx";
+import BlogFilter from "../../components/BlogFilter/BlogFilter.jsx";
 import "./BlogHome.css";
 
 const client = generateClient();
@@ -33,6 +34,7 @@ const BlogHome = () => {
           </p>
         </div>
       </div>
+      <BlogFilter />
       <div className="blog-home__post-list">
         <div className="blog-home__max-width">
           {posts.map((post) => (
