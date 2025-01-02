@@ -7,8 +7,10 @@ import "./BlogHome.css";
 const client = generateClient();
 
 const getPosts = async function (filterObj) {
-  console.log(filterObj)
-  const { data: posts, errors } = await client.models.blogPost.list({ filter: filterObj });
+  console.log(filterObj);
+  const { data: posts, errors } = await client.models.blogPost.list({
+    filter: filterObj,
+  });
   return posts;
 };
 
@@ -30,11 +32,13 @@ const BlogHome = () => {
   useEffect(() => {
     const categoryQuery = Object.values(categories)
       .filter((category) => category.checked)
-      .map((category) => category.checked && { category: { eq: category.name } });
-    
+      .map(
+        (category) => category.checked && { category: { eq: category.name } },
+      );
+
     const filter = {
-      or: categoryQuery
-    }
+      or: categoryQuery,
+    };
 
     getPosts(filter).then((posts) => {
       setPosts(posts);
@@ -54,7 +58,14 @@ const BlogHome = () => {
           </p>
         </div>
       </div>
-      <BlogFilter categories={categories} setCategories={setCategories}/>
+      <div className="blog-home__filter">
+        <BlogFilter
+          className="blog-home__max-width"
+          categories={categories}
+          setCategories={setCategories}
+        />
+      </div>
+
       <div className="blog-home__post-list">
         <div className="blog-home__max-width">
           {posts.map((post) => (
