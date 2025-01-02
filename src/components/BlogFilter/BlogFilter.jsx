@@ -27,7 +27,7 @@ const CategoryInput = ({ name, desc, checked, setChecked }) => {
 const BlogFilter = ({ className, categories, setCategories }) => {
   return (
     <details className={`blog-filter ${className}`}>
-      <summary>Category</summary>
+      <summary>Filter by category</summary>
       {Object.entries(categories).map(([key, categoryProps]) => {
         const setChecked = (newValue) => {
           setCategories({
