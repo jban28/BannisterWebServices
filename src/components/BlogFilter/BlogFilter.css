@@ -1,0 +1,40 @@
+.category-input {
+    margin: 12px;
+    padding: 12px;
+    display: block;
+    border-radius: var(--bs-border-radius);
+    background-color: white;
+    color: black;
+    user-select: none;
+    text-align: start;
+}
+
+.category-input:hover {
+    background-color: #eeeeee;
+}
+
+.category-input:active {
+    background-color: #dddddd;
+}
+
+.category-input__checked {
+    color: white;
+    background-color: var(--theme-main);
+}
+
+.category-input__checked:hover {
+    background-color: #e22600;
+}
+
+.category-input__checked:active {
+    background-color: #c62201;
+}
+
+.category-input--name {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.category-input--checkbox {
+    margin-inline-end: 1ch;
+}
