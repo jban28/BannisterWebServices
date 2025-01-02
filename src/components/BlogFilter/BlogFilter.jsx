@@ -24,26 +24,7 @@ const CategoryInput = ({ name, desc, checked, setChecked }) => {
   );
 };
 
-const BlogFilter = () => {
-  const [categories, setCategories] = useState({
-    deepDive: {
-      name: "Deep Dive",
-      desc: "an in depth look at a particular topic",
-      checked: false,
-    },
-    quickLearn: {
-      name: "Quick Learn",
-      desc: "a quick look at a specific aspec of something",
-      checked: false,
-    },
-  });
-
-  const categoryQuery = Object.values(categories)
-    .filter((category) => category.checked)
-    .map((category) => category.checked && { category: { eq: category.name } });
-
-  console.log(categoryQuery);
-
+const BlogFilter = ({ categories, setCategories }) => {
   return (
     <div>
       {Object.entries(categories).map(([key, categoryProps]) => {

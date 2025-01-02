@@ -6,20 +6,40 @@ import "./BlogHome.css";
 
 const client = generateClient();
 
-const getPosts = async function () {
-  const { data: posts, errors } = await client.models.blogPost.list();
+const getPosts = async function (filterObj) {
+  console.log(filterObj)
+  const { data: posts, errors } = await client.models.blogPost.list({ filter: filterObj });
   return posts;
 };
 
 const BlogHome = () => {
   const [posts, setPosts] = useState([]);
+  const [categories, setCategories] = useState({
+    deepDive: {
+      name: "Deep Dive",
+      desc: "an in depth look at a particular topic",
+      checked: false,
+    },
+    quickLearn: {
+      name: "Quick Learn",
+      desc: "a quick look at a specific aspec of something",
+      checked: false,
+    },
+  });
 
   useEffect(() => {
-    getPosts().then((posts) => {
-      console.log(posts);
+    const categoryQuery = Object.values(categories)
+      .filter((category) => category.checked)
+      .map((category) => category.checked && { category: { eq: category.name } });
+    
+    const filter = {
+      or: categoryQuery
+    }
+
+    getPosts(filter).then((posts) => {
       setPosts(posts);
     });
-  }, []);
+  }, [categories]);
   return (
     <>
       <div className="blog-home__intro">
@@ -34,7 +54,7 @@ const BlogHome = () => {
           </p>
         </div>
       </div>
-      <BlogFilter />
+      <BlogFilter categories={categories} setCategories={setCategories}/>
       <div className="blog-home__post-list">
         <div className="blog-home__max-width">
           {posts.map((post) => (
