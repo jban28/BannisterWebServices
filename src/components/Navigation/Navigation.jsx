@@ -1,6 +1,6 @@
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { forwardRef } from "react";
 import "./Navigation.css";
 
@@ -17,20 +17,27 @@ const Navigation = forwardRef(function ({ opacity = 1 }, ref) {
     >
       <Nav justify variant="underline">
         <Nav.Item>
-          <Nav.Link active={routerLocation.pathname === "/"} href="/">
+          <Nav.Link as={Link} active={routerLocation.pathname === "/"} to="/">
             Home
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link
+            as={Link}
             active={routerLocation.pathname === "/portfolio"}
-            href="/portfolio"
+            to="/portfolio"
           >
             Portfolio
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav.Link
+            as={Link}
+            to="/blog"
+            active={routerLocation.pathname === "/blog"}
+          >
+            Blog
+          </Nav.Link>
         </Nav.Item>
       </Nav>
     </Navbar>
