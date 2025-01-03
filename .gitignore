@@ -30,3 +30,6 @@ deployment.zip
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+
+# vscode
+.vscode
