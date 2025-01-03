@@ -12,3 +12,7 @@
 .blog-home__intro-text {
   margin-bottom: 0px;
 }
+
+.blog-home__post-list {
+  margin-bottom: 24px;
+}
