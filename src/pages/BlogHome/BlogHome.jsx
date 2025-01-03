@@ -15,6 +15,7 @@ const getPosts = async function (filterObj) {
 };
 
 const BlogHome = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [posts, setPosts] = useState([]);
   const [categories, setCategories] = useState({
     deepDive: {
@@ -35,6 +36,7 @@ const BlogHome = () => {
   });
 
   useEffect(() => {
+    setIsLoaded(false);
     const categoryQuery = Object.values(categories)
       .filter((category) => category.checked)
       .map(
@@ -47,6 +49,7 @@ const BlogHome = () => {
 
     getPosts(filter).then((posts) => {
       setPosts(posts);
+      setIsLoaded(true);
     });
   }, [categories]);
   return (
@@ -78,30 +81,21 @@ const BlogHome = () => {
 
       <div className="blog-home__post-list">
         <div className="blog-home__max-width">
-          {posts.map((post) => (
-            <PostCard
-              key={post.id}
-              id={post.id}
-              title={post.title}
-              date={post.lastRevised}
-              summary={post.summary}
-              arrTags={post.tags}
-              category={post.category}
-            />
-          ))}
-          <PostCard
-            id="someID"
-            title="example"
-            date="23 December 2024"
-            summary="An example post summary"
-            arrTags={["tag 1", "tag 2"]}
-            category="Uncategorized"
-          />
-          <PostCard
-            id="someOtherID"
-            title="another example"
-            date="23 December 2024"
-          />
+          {isLoaded &&
+            posts.length > 0 &&
+            posts.map((post) => (
+              <PostCard
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                date={post.lastRevised}
+                summary={post.summary}
+                arrTags={post.tags}
+                category={post.category}
+              />
+            ))}
+          {isLoaded && posts.length == 0 && <div>No posts found</div>}
+          {!isLoaded && <div>Loading posts...</div>}
         </div>
       </div>
     </>
