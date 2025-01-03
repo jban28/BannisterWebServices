@@ -3,8 +3,6 @@ import PostData from "../PostData/PostData";
 import "./PostCard.css";
 
 const PostCard = ({ id, title, date, summary, category, arrTags }) => {
-  const openPost = () => {};
-
   return (
     <div className="post-card">
       <Link to={id} className="post-card__link">
