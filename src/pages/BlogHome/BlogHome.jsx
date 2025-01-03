@@ -7,7 +7,6 @@ import "./BlogHome.css";
 const client = generateClient();
 
 const getPosts = async function (filterObj) {
-  console.log(filterObj);
   const { data: posts, errors } = await client.models.blogPost.list({
     filter: filterObj,
   });
