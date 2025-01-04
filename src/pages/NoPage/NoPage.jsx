@@ -1,6 +1,4 @@
 import Button from "react-bootstrap/Button";
-import Navigation from "../../components/Navigation/Navigation.jsx";
-import Footer from "../../components/Footer/Footer.jsx";
 import "./NoPage.css";
 
 const NoPage = () => {

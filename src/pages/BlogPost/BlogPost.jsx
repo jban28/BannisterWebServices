@@ -1,4 +1,4 @@
-import { generateClient, post } from "aws-amplify/data";
+import { generateClient } from "aws-amplify/data";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Markdown from "react-markdown";
@@ -11,7 +11,7 @@ import "highlight.js/styles/github.css";
 const client = generateClient();
 
 const getPost = async function (postId) {
-  const { data: postData, errors } = await client.models.blogPost.get({
+  const { data: postData } = await client.models.blogPost.get({
     id: postId,
   });
   if (!postData) {
@@ -34,6 +34,7 @@ const BlogPost = () => {
         setNoPost(false);
       })
       .catch((err) => {
+        console.error(err);
         setNoPost(true);
       });
   }, [location]);

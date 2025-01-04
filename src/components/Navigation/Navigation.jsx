@@ -44,4 +44,6 @@ const Navigation = forwardRef(function ({ opacity = 1 }, ref) {
   );
 });
 
+Navigation.displayName = "Navigation";
+
 export default Navigation;

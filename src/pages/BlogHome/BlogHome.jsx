@@ -7,7 +7,7 @@ import "./BlogHome.css";
 const client = generateClient();
 
 const getPosts = async function (filterObj) {
-  const { data: posts, errors } = await client.models.blogPost.list({
+  const { data: posts } = await client.models.blogPost.list({
     filter: filterObj,
   });
   return posts;
@@ -60,13 +60,13 @@ const BlogHome = () => {
             I set this blog up intially whilst experimenting with Wordpress
             (though it is now set up with a serverless backend to reduce hosting
             costs). It still exists mainly for me to learn how to set up a
-            website backend, and I don't really expect anyone to actually read
-            it. However, maybe you will find something useful or interesting
-            here. Or maybe you will see a mistake I have made and contact me so
-            I can learn from you. The posts I write are designed to serve as my
-            own reference notes, as I find that if I want to learn something
-            properly then there is no substitute for writing it down in my own
-            words.
+            website backend, and I don&apos;t really expect anyone to actually
+            read it. However, maybe you will find something useful or
+            interesting here. Or maybe you will see a mistake I have made and
+            contact me so I can learn from you. The posts I write are designed
+            to serve as my own reference notes, as I find that if I want to
+            learn something properly then there is no substitute for writing it
+            down in my own words.
           </p>
         </div>
       </div>

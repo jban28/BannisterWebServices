@@ -21,6 +21,9 @@ export default [
     rules: {
       // suppress errors for missing 'import React' in files
       "react/react-in-jsx-scope": "off",
+
+      // supress "<prop> is missing in props validation error"
+      "react/prop-types": "off",
     },
   },
 ];

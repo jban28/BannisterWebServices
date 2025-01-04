@@ -121,7 +121,7 @@ const ContactForm = ({ className = "", style = {} }) => {
           </div>
         )}
         <Button type="submit">
-          {status === "sending" && <div class="contact-form__spinner" />}
+          {status === "sending" && <div className="contact-form__spinner" />}
           {buttonHTML}
         </Button>
       </fieldset>
