@@ -1,7 +1,7 @@
 .portfolio {
   display: grid;
-  gap: 24px;
-  margin: 24px;
+  gap: 2--spx;
+  margin: 2--spx;
 }
 
 @media screen and (min-width: 780px) {

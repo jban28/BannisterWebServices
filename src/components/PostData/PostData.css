@@ -5,10 +5,10 @@
 .post-data__category {
   display: inline-block;
   color: black;
-  padding: 0 3px;
-  border-radius: 3px;
+  padding: 0 0.25--spx;
+  border-radius: 0.25--spx;
   border: 1px solid black;
-  margin: 0 0 3px;
+  margin: 0 0 0.25--spx;
 }
 
 .post-data__details {

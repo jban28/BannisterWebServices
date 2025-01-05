@@ -18,20 +18,20 @@
 
 .project-card__img-overlay {
   text-align: left;
-  height: 36px;
+  height: 3--spx;
 }
 
 .project-card__icon {
-  font-size: 24px;
+  font-size: 2--spx;
   background-color: var(--theme-main);
   background-blend-mode: multiply;
   color: black;
-  width: 36px;
-  height: 36px;
+  width: 3--spx;
+  height: 3--spx;
   line-height: 1.5;
   text-align: center;
-  border-radius: 6px;
-  margin-right: 6px;
+  border-radius: 0.5--spx;
+  margin-right: 0.5--spx;
   display: inline-block;
 }
 

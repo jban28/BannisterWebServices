@@ -1,5 +1,5 @@
 .footer {
   background-color: var(--theme-main);
-  padding-block: 24px;
+  padding-block: 2--spx;
   text-align: center;
 }

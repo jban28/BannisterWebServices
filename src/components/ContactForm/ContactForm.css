@@ -12,12 +12,12 @@
 
 .contact-form__fail-message {
   color: red;
-  margin-bottom: 12px;
+  margin-bottom: 1--spx;
 }
 
 .contact-form__form-group {
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 2--spx;
 }
 
 .contact-form__confirmation-text {

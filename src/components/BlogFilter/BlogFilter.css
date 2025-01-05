@@ -1,12 +1,12 @@
 .blog-filter {
-  padding-inline: 24px;
-  margin-block: 24px;
+  padding-inline: 2--spx;
+  margin-block: 2--spx;
   text-align: start;
 }
 
 .category-input {
-  margin: 12px 24px;
-  padding: 12px;
+  margin: 1--spx 2--spx;
+  padding: 1--spx;
   display: block;
   border-radius: var(--bs-border-radius);
   background-color: white;

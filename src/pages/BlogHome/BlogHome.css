@@ -1,7 +1,7 @@
 .blog-home__intro {
   background-color: white;
   color: black;
-  padding: 24px;
+  padding: 2--spx;
 }
 
 .blog-home__max-width {
@@ -14,5 +14,5 @@
 }
 
 .blog-home__post-list {
-  margin-bottom: 24px;
+  margin-bottom: 2--spx;
 }

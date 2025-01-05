@@ -2,7 +2,7 @@
   margin-inline: auto;
   max-width: 752px;
   font-size: large;
-  margin-bottom: 48px;
+  margin-bottom: 4--spx;
 }
 
 .homepage__brand-bar {
@@ -11,12 +11,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
-  font-size: 36px;
+  gap: 2--spx;
+  font-size: 3--spx;
 }
 
 .homepage__container {
-  padding: 48px;
+  padding: 4--spx;
 }
 
 .homepage__container--white {

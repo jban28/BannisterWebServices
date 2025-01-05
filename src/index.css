@@ -7,6 +7,9 @@
   --bs-emphasis-color-rgb: var(--theme-1);
   --bs-link-color: white;
   --bs-link-hover-color: white;
+
+  /* Custom Units */
+  --spx: 12px; /* Spacing pixel - used for margins and padding */
 }
 
 body {

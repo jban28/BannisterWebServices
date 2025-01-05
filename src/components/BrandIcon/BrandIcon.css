@@ -13,7 +13,7 @@
   top: 120%;
   left: 50%;
   margin-left: -43px;
-  padding: 6px;
+  padding: 0.5--spx;
   border-radius: 3px;
   width: 86px;
 }

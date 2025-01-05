@@ -1,14 +1,14 @@
 .blog-post__post {
   background-color: white;
   color: black;
-  padding: 24px;
+  padding: 2--spx;
   margin: auto;
   text-align: start;
   min-height: 100%;
 }
 
 .blog-post__content {
-  margin-top: 24px;
+  margin-top: 2--spx;
 }
 
 .blog-post__content code {
@@ -16,7 +16,7 @@
 }
 
 .blog-post__error {
-  padding: 24px;
+  padding: 2--spx;
   min-height: 100%;
 }
 
