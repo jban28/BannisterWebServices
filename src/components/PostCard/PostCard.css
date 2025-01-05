@@ -2,15 +2,15 @@
   max-width: 752px;
   margin: 2--spx;
   padding: 2--spx;
-  background-color: white;
-  color: black;
+  background-color: var(--gray-100);
+  color: var(--gray-0);
   border-radius: var(--bs-border-radius);
   text-align: left;
 }
 
 .post-card__link {
   text-decoration: none;
-  color: black;
+  color: var(--gray-0);
 }
 
 .post-card__title:hover {

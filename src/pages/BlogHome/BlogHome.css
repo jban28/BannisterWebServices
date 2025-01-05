@@ -1,6 +1,6 @@
 .blog-home__intro {
-  background-color: white;
-  color: black;
+  background-color: var(--gray-100);
+  color: var(--gray-0);
   padding: 2--spx;
 }
 

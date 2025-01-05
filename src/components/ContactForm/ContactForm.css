@@ -1,6 +1,6 @@
 .contact-form__spinner {
-  border: 0.2em solid white;
-  border-top: 0.2em solid #888888;
+  border: 0.2em solid var(--gray-100);
+  border-top: 0.2em solid var(--gray-60);
   border-radius: 50%;
   width: 1em;
   height: 1em;

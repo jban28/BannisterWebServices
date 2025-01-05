@@ -1,6 +1,6 @@
 .blog-post__post {
-  background-color: white;
-  color: black;
+  background-color: var(--gray-100);
+  color: var(--gray-0);
   padding: 2--spx;
   margin: auto;
   text-align: start;
@@ -12,7 +12,7 @@
 }
 
 .blog-post__content code {
-  background-color: #dddddd;
+  background-color: var(--gray-80);
 }
 
 .blog-post__error {

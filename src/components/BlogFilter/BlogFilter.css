@@ -9,8 +9,8 @@
   padding: 1--spx;
   display: block;
   border-radius: var(--bs-border-radius);
-  background-color: white;
-  color: black;
+  background-color: var(--gray-100);
+  color: var(--gray-0);
   user-select: none;
   text-align: start;
 }
@@ -25,15 +25,15 @@
 
 .category-input__checked {
   color: white;
-  background-color: var(--theme-main);
+  background-color: var(--theme-50);
 }
 
 .category-input__checked:hover {
-  background-color: #e22600;
+  background-color: var(--theme-60);
 }
 
 .category-input__checked:active {
-  background-color: #c62201;
+  background-color: var(--theme-70);
 }
 
 .category-input--name {

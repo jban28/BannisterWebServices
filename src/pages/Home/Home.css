@@ -20,12 +20,12 @@
 }
 
 .homepage__container--white {
-  background-color: white;
-  color: black;
+  background-color: var(--gray-100);
+  color: var(--gray-0);
 }
 
 .homepage__container--theme {
-  background-color: var(--theme-main);
+  background-color: var(--theme-50);
 }
 
 .homepage__max-width {

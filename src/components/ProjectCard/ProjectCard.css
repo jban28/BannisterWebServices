@@ -23,7 +23,7 @@
 
 .project-card__icon {
   font-size: 2--spx;
-  background-color: var(--theme-main);
+  background-color: var(--theme-50);
   background-blend-mode: multiply;
   color: black;
   width: 3--spx;
@@ -46,6 +46,6 @@ i[class*=" fi-brands-"]:before {
 }
 
 .project-card__nav-link {
-  background-color: var(--theme-main);
+  background-color: var(--theme-50);
   cursor: pointer;
 }

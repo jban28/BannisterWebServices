@@ -1,22 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 @import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
+@import "./colors.css";
 
 :root {
-  --theme-main: #ff2a00;
-  --theme-1: white;
-  --bs-emphasis-color-rgb: var(--theme-1);
-  --bs-link-color: white;
-  --bs-link-hover-color: white;
+  --bs-emphasis-color-rgb: var(--gray-100);
+  --bs-link-color: var(--gray-100);
+  --bs-link-hover-color: var(--gray-100);
 
   /* Custom Units */
   --spx: 12px; /* Spacing pixel - used for margins and padding */
 }
 
 body {
-  color: white;
+  color: var(--gray-100);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #181818; /*Fallback*/
+  background-color: var(--gray-10); /*Fallback*/
   background-image: url("/background.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -38,14 +37,14 @@ ul {
 }
 
 .btn-primary {
-  --bs-btn-color: var(--theme-1);
-  --bs-btn-active-color: var(--theme-1);
-  --bs-btn-bg: #ff2a00;
-  --bs-btn-border-color: #ff2a00;
-  --bs-btn-hover-bg: #e22600;
-  --bs-btn-hover-border-color: #e22600;
-  --bs-btn-active-bg: #c62201;
-  --bs-btn-active-border-color: #c62201;
-  --bs-btn-disabled-bg: #ff2a00;
-  --bs-btn-disabled-border-color: #ff2a00;
+  --bs-btn-color: var(--gray-100);
+  --bs-btn-active-color: var(--gray-100);
+  --bs-btn-bg: var(--theme-50);
+  --bs-btn-border-color: var(--theme-50);
+  --bs-btn-hover-bg: var(--theme-40);
+  --bs-btn-hover-border-color: var(--theme-40);
+  --bs-btn-active-bg: var(--theme-30);
+  --bs-btn-active-border-color: var(--theme-30);
+  --bs-btn-disabled-bg: var(--theme-50);
+  --bs-btn-disabled-border-color: var(--theme-50);
 }

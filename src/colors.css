@@ -1,0 +1,27 @@
+:root {
+  --theme-hue: 10;
+  --theme-sat: 100%;
+  --theme-10: hsl(var(--theme-hue), var(--theme-sat), 10%);
+  --theme-20: hsl(var(--theme-hue), var(--theme-sat), 20%);
+  --theme-30: hsl(var(--theme-hue), var(--theme-sat), 30%);
+  --theme-40: hsl(var(--theme-hue), var(--theme-sat), 40%);
+  --theme-50: hsl(var(--theme-hue), var(--theme-sat), 50%);
+  --theme-60: hsl(var(--theme-hue), var(--theme-sat), 60%);
+  --theme-70: hsl(var(--theme-hue), var(--theme-sat), 70%);
+  --theme-80: hsl(var(--theme-hue), var(--theme-sat), 80%);
+  --theme-90: hsl(var(--theme-hue), var(--theme-sat), 90%);
+
+  --gray-hue: 0;
+  --gray-sat: 0%;
+  --gray-0: hsl(var(--gray-hue), var(--gray-sat), 0%);
+  --gray-10: hsl(var(--gray-hue), var(--gray-sat), 10%);
+  --gray-20: hsl(var(--gray-hue), var(--gray-sat), 20%);
+  --gray-30: hsl(var(--gray-hue), var(--gray-sat), 30%);
+  --gray-40: hsl(var(--gray-hue), var(--gray-sat), 40%);
+  --gray-50: hsl(var(--gray-hue), var(--gray-sat), 50%);
+  --gray-60: hsl(var(--gray-hue), var(--gray-sat), 60%);
+  --gray-70: hsl(var(--gray-hue), var(--gray-sat), 70%);
+  --gray-80: hsl(var(--gray-hue), var(--gray-sat), 80%);
+  --gray-90: hsl(var(--gray-hue), var(--gray-sat), 90%);
+  --gray-100: hsl(var(--gray-hue), var(--gray-sat), 100%);
+}

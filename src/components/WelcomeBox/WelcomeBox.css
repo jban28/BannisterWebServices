@@ -14,7 +14,7 @@
 }
 
 .welcome-box__message--highlight {
-  background-color: var(--theme-main);
+  background-color: var(--theme-50);
   padding: 0.5--spx 1--spx;
   margin-block: 0.5--spx;
   margin-inline: -1--spx;
@@ -25,7 +25,7 @@
 }
 
 .welcome-box__message--highlight::first-letter {
-  color: black;
+  color: var(--gray-0);
 }
 
 .welcome-box__message--highlight.show {

@@ -3,8 +3,8 @@
 }
 
 .brand-icon__tooltip {
-  color: black;
-  background-color: white;
+  color: var(--gray-0);
+  background-color: var(--gray-100);
   visibility: hidden;
   position: absolute;
   font-size: small;
@@ -26,7 +26,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent white transparent;
+  border-color: transparent transparent var(--gray-100) transparent;
 }
 
 .brand-icon__icon:hover .brand-icon__tooltip {
