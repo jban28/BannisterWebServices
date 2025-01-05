@@ -19,7 +19,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "npx prettier ./src -w && eslint ./src ./amplify"
+    "lint": "npx eslint ./src ./amplify",
+    "print": "npx prettier ./src -w"
   },
   "postcss": {
     "map": false,
