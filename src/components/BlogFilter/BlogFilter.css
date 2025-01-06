@@ -16,15 +16,15 @@
 }
 
 .category-input:hover {
-  background-color: #eeeeee;
+  background-color: var(--gray-100);
 }
 
 .category-input:active {
-  background-color: #dddddd;
+  background-color: var(--gray-90);
 }
 
 .category-input__checked {
-  color: white;
+  color: var(--gray-100);
   background-color: var(--theme-50);
 }
 
