@@ -1,8 +1,9 @@
-import Button from "react-bootstrap/Button";
+import Button from "../../components/Button/Button.jsx";
 import BrandIcon from "../../components/BrandIcon/BrandIcon.jsx";
 import ContactForm from "../../components/ContactForm/ContactForm.jsx";
 import "./Home.css";
 import arrBrands from "../../config/brands.json";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
           on a casual basis and will consider taking on any project that I think
           I am capable of completing.
         </p>
-        <Button href="/portfolio">View my portfolio</Button>
+        <Button as={Link} to="/portfolio">
+          View my portfolio
+        </Button>
       </div>
 
       <div className="homepage__container homepage__container--theme">

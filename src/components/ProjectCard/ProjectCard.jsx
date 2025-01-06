@@ -1,8 +1,9 @@
 import Card from "react-bootstrap/Card";
 import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button";
+import Button from "../Button/Button.jsx";
 import { useState } from "react";
 import "./ProjectCard.css";
+import { Link } from "react-router-dom";
 
 const ProjectCard = (props) => {
   const [section, setSection] = useState("description");
@@ -67,7 +68,7 @@ const ProjectCard = (props) => {
                 ))}
               </Card.Text>
               {"git" in props.data && (
-                <Button href={props.data.git}>
+                <Button as={Link} to={props.data.git}>
                   <img
                     height="26px"
                     width="26px"

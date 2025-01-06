@@ -22,6 +22,7 @@ body {
   background-size: cover;
   text-align: center;
   min-width: min-content;
+  line-height: 1.5;
 }
 
 h2 {
@@ -34,17 +35,4 @@ h3 {
 
 ul {
   text-align: left;
-}
-
-.btn-primary {
-  --bs-btn-color: var(--gray-100);
-  --bs-btn-active-color: var(--gray-100);
-  --bs-btn-bg: var(--theme-50);
-  --bs-btn-border-color: var(--theme-50);
-  --bs-btn-hover-bg: var(--theme-40);
-  --bs-btn-hover-border-color: var(--theme-40);
-  --bs-btn-active-bg: var(--theme-30);
-  --bs-btn-active-border-color: var(--theme-30);
-  --bs-btn-disabled-bg: var(--theme-50);
-  --bs-btn-disabled-border-color: var(--theme-50);
 }

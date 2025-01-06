@@ -1,0 +1,21 @@
+.button {
+  display: inline-block; /* ensures consistency between <button> and <a> */
+  background-color: var(--theme-50);
+  color: var(--gray-100);
+  padding: 0.5--spx 1--spx;
+  font-size: inherit;
+  border-radius: 0.5--spx;
+  border: none;
+  text-decoration: none;
+  line-height: inherit;
+}
+
+.button:hover {
+  background-color: var(--theme-40);
+  color: var(--gray-100);
+}
+
+.button:active {
+  background-color: var(--theme-30);
+  color: var(--gray-100);
+}
