@@ -32,7 +32,7 @@
     "technical": [
       "Client-rendered SPA built using React JS",
       "Backend API written in Flask for handling contact form submissions",
-      "Bootstrap framework used throughout for styling and layout"
+      "Blog implemented using AWS Amplify backend (replacing wordpress with custom theme to reduce hosting costs)"
     ],
     "imageFile": "/bws.png",
     "technologyLogos": [
@@ -41,8 +41,7 @@
       "fa-brands fa-python",
       "fa-brands fa-html5",
       "fa-brands fa-css3-alt",
-      "fi fi-brands-bootstrap",
-      "fa-brands fa-wordpress"
+      "fa-brands fa-aws"
     ]
   },
   {
