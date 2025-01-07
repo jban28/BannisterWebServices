@@ -58,7 +58,6 @@ const ProjectCard = (props) => {
       </header>
 
       <CardNav activeTab={activeTab} setActiveTab={setActiveTab} />
-      {/* <div className={styles.cardContent}> */}
       {activeTab === 0 && (
         <p className={`${styles.cardContent} ${styles.cardText}`}>
           {props.data.description}
@@ -85,7 +84,6 @@ const ProjectCard = (props) => {
           )}
         </div>
       )}
-      {/* </div> */}
     </article>
   );
 };
