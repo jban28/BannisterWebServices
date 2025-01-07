@@ -9,7 +9,7 @@ function MainLayout() {
         display: "flex",
         flexDirection: "column",
         minHeight: "100vh",
-        height: 0,
+        height: "min-content",
       }}
     >
       <Navigation />
