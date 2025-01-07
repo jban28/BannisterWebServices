@@ -13,7 +13,7 @@ function MainLayout() {
       }}
     >
       <Navigation />
-      <div style={{ flexGrow: 1 }}>
+      <div style={{ flex: "1 0 0" }}>
         <Outlet />
       </div>
       <Footer />
