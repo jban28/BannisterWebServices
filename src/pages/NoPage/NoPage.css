@@ -1,9 +1,3 @@
-/* .no-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-} */
-
 .no-page__container {
   display: flex;
   justify-content: center;
