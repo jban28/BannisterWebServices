@@ -1,12 +1,43 @@
 import Card from "react-bootstrap/Card";
-import Nav from "react-bootstrap/Nav";
 import Button from "../Button/Button.jsx";
 import { useState } from "react";
 import "./ProjectCard.css";
+import styles from "./ProjectCard.module.css";
 import { Link } from "react-router-dom";
 
+const CardNavTab = ({ children, tab, activeTab, setActiveTab }) => {
+  const active = tab === activeTab;
+  return (
+    <button
+      className={
+        styles.cardNavTab + (active ? ` ${styles.cardNavTabActive}` : "")
+      }
+      onClick={() => {
+        setActiveTab(tab);
+      }}
+    >
+      {children}
+    </button>
+  );
+};
+
+const CardNav = ({ activeTab, setActiveTab }) => {
+  return (
+    <nav className={styles.cardNav}>
+      <div className={styles.cardNavTabList}>
+        <CardNavTab tab={0} activeTab={activeTab} setActiveTab={setActiveTab}>
+          Description
+        </CardNavTab>
+        <CardNavTab tab={1} activeTab={activeTab} setActiveTab={setActiveTab}>
+          Technical Details
+        </CardNavTab>
+      </div>
+    </nav>
+  );
+};
+
 const ProjectCard = (props) => {
-  const [section, setSection] = useState("description");
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <>
@@ -28,39 +59,14 @@ const ProjectCard = (props) => {
         <Card.Subtitle className="project-card__subtitle">
           {props.data.subtitle}
         </Card.Subtitle>
-        <Nav
-          variant="tabs"
-          className="justify-content-center"
-          defaultActiveKey="#first"
-        >
-          <Nav.Item>
-            <Nav.Link
-              as="div"
-              active={section === "description"}
-              className="project-card__nav-link"
-              onClick={() => setSection("description")}
-            >
-              Description
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link
-              as="div"
-              active={section === "technical"}
-              className="project-card__nav-link"
-              onClick={() => setSection("technical")}
-            >
-              Technical Details
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
+        <CardNav activeTab={activeTab} setActiveTab={setActiveTab} />
         <Card.Body>
-          {section === "description" && (
+          {activeTab === 0 && (
             <Card.Text className="project-card__text">
               {props.data.description}
             </Card.Text>
           )}
-          {section === "technical" && (
+          {activeTab === 1 && (
             <>
               <Card.Text as="ul">
                 {props.data.technical.map((item, index) => (

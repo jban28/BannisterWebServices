@@ -1,0 +1,37 @@
+.cardNav {
+  --card-nav-border-color: var(--gray-80);
+  --card-nav-border-width: 2px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--card-nav-border-color);
+}
+
+.cardNavTabList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: calc(
+    0px - var(--card-nav-border-width)
+  ); /* Hide bottom border of cardNav */
+}
+
+.cardNavTab {
+  padding: 0.5--spx 1--spx;
+  border: var(--card-nav-border-width) solid transparent;
+  border-bottom: var(--card-nav-border-width) solid var(--card-nav-border-color);
+  border-radius: 0.5--spx 0.5--spx 0 0;
+  background-color: var(--theme-50);
+  background-clip: padding-box;
+  color: var(--gray-100);
+  transition: all 0.2s;
+}
+
+.cardNavTab:hover {
+  border-color: var(--card-nav-border-color);
+}
+
+.cardNavTab.cardNavTabActive {
+  border-color: var(--card-nav-border-color);
+  border-bottom: var(--card-nav-border-width) solid var(--gray-100);
+  background-color: var(--gray-100);
+  color: var(--gray-0);
+}
