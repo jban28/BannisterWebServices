@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Button from "../Button/Button.jsx";
-import "./ContactForm.css";
 import styles from "./ContactForm.module.css";
 
 const ContactForm = ({ className = "", style = {} }) => {
@@ -25,15 +24,14 @@ const ContactForm = ({ className = "", style = {} }) => {
     }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (formData) => {
     setStatus("sending");
-    var form = new FormData(e.target);
+
     var request = {
-      name: form.get("name"),
-      email: form.get("email"),
-      subject: form.get("subject"),
-      message: form.get("message"),
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
     };
 
     fetch(
@@ -71,7 +69,7 @@ const ContactForm = ({ className = "", style = {} }) => {
     <form
       style={{ ...style }}
       className={`${className}`}
-      onSubmit={handleSubmit}
+      action={handleSubmit}
       acceptCharset="utf-8"
     >
       <h1>Contact me</h1>
