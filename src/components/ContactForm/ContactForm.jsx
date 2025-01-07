@@ -4,6 +4,12 @@ import styles from "./ContactForm.module.css";
 
 const ContactForm = ({ className = "", style = {} }) => {
   const [status, setStatus] = useState("idle");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   let buttonHTML;
   switch (status) {
@@ -24,6 +30,14 @@ const ContactForm = ({ className = "", style = {} }) => {
     }
   }
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = (formData) => {
     setStatus("sending");
 
@@ -35,7 +49,7 @@ const ContactForm = ({ className = "", style = {} }) => {
     };
 
     fetch(
-      "https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form",
+      "https://xixnmy7aq2.execute-api.eu-west-2.amazonaws.com/master/contact-form-404",
       {
         method: "POST",
         body: JSON.stringify(request),
@@ -44,6 +58,12 @@ const ContactForm = ({ className = "", style = {} }) => {
       .then((response) => {
         if (response.ok === true) {
           setStatus("sent");
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
         } else {
           throw new Error("Service not available");
         }
@@ -82,6 +102,8 @@ const ContactForm = ({ className = "", style = {} }) => {
             placeholder="Enter your name"
             name="name"
             id="name"
+            value={formData.name}
+            onChange={handleChange}
             required
           />
         </div>
@@ -93,6 +115,8 @@ const ContactForm = ({ className = "", style = {} }) => {
             placeholder="Enter your email"
             name="email"
             id="email"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -104,6 +128,8 @@ const ContactForm = ({ className = "", style = {} }) => {
             placeholder="Subject"
             name="subject"
             id="subject"
+            value={formData.subject}
+            onChange={handleChange}
             required
           />
         </div>
@@ -115,6 +141,8 @@ const ContactForm = ({ className = "", style = {} }) => {
             placeholder="Enter message"
             name="message"
             id="subject"
+            value={formData.message}
+            onChange={handleChange}
             required
           />
         </div>
