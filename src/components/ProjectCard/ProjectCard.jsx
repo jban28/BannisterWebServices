@@ -1,7 +1,5 @@
-import Card from "react-bootstrap/Card";
 import Button from "../Button/Button.jsx";
 import { useState } from "react";
-import "./ProjectCard.css";
 import styles from "./ProjectCard.module.css";
 import { Link } from "react-router-dom";
 
@@ -40,56 +38,55 @@ const ProjectCard = (props) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <>
-      <Card className="project-card">
-        <a href={props.data.link}>
-          <Card.Img
-            variant="top"
-            src={"/portfolio-images" + props.data.imageFile}
-            alt={props.data.title}
-            className="project-card__img"
-          ></Card.Img>
-          <Card.ImgOverlay className="project-card__img-overlay">
-            {props.data.technologyLogos?.map((logo, index) => (
-              <i key={index} className={`project-card__icon ${logo}`}></i>
+    <article className={styles.card}>
+      <img
+        src={"/portfolio-images" + props.data.imageFile}
+        alt={props.data.title}
+        className={styles.cardImg}
+      />
+      <div className={styles.cardOverlay}>
+        {props.data.technologyLogos?.map((logo, index) => (
+          <i key={index} className={`${styles.cardIcon} ${logo}`}></i>
+        ))}
+      </div>
+
+      <header className={styles.cardHeader}>
+        <h1 className={styles.cardTitle}>
+          {props.data.link ? <Link>{props.data.title}</Link> : props.data.title}
+        </h1>
+        <p className={styles.cardSubtitle}>{props.data.subtitle}</p>
+      </header>
+
+      <CardNav activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* <div className={styles.cardContent}> */}
+      {activeTab === 0 && (
+        <p className={`${styles.cardContent} ${styles.cardText}`}>
+          {props.data.description}
+        </p>
+      )}
+      {activeTab === 1 && (
+        <div className={styles.cardContent}>
+          <ul>
+            {props.data.technical.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
-          </Card.ImgOverlay>
-          <Card.Title>{props.data.title}</Card.Title>
-        </a>
-        <Card.Subtitle className="project-card__subtitle">
-          {props.data.subtitle}
-        </Card.Subtitle>
-        <CardNav activeTab={activeTab} setActiveTab={setActiveTab} />
-        <Card.Body>
-          {activeTab === 0 && (
-            <Card.Text className="project-card__text">
-              {props.data.description}
-            </Card.Text>
+          </ul>
+          {"git" in props.data && (
+            <Button as={Link} to={props.data.git}>
+              <img
+                height="26px"
+                width="26px"
+                className={styles.cardGitIcon}
+                src="/github-mark-white.svg"
+                alt="git"
+              />
+              View source on github
+            </Button>
           )}
-          {activeTab === 1 && (
-            <>
-              <Card.Text as="ul">
-                {props.data.technical.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </Card.Text>
-              {"git" in props.data && (
-                <Button as={Link} to={props.data.git}>
-                  <img
-                    height="26px"
-                    width="26px"
-                    className="project-card__git-button"
-                    src="/github-mark-white.svg"
-                    alt="git"
-                  />
-                  View source on github
-                </Button>
-              )}
-            </>
-          )}
-        </Card.Body>
-      </Card>
-    </>
+        </div>
+      )}
+      {/* </div> */}
+    </article>
   );
 };
 

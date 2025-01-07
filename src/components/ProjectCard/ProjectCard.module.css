@@ -1,23 +1,94 @@
+.card {
+  --card-border-color: var(--gray-80);
+  --card-border-width: 2px;
+  position: relative;
+  height: 100%;
+  color: var(--gray-0);
+  background-color: var(--gray-100);
+  border-radius: 0.5--spx;
+  border: var(--card-border-width) solid var(--card-border-color);
+}
+
+.cardImg {
+  aspect-ratio: 16/9;
+  width: 100%;
+  border-top-left-radius: 0.5--spx;
+  border-top-right-radius: 0.5--spx;
+}
+
+.cardOverlay {
+  display: flex;
+  justify-content: start;
+  gap: 0.5--spx;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1--spx;
+}
+
+.cardIcon {
+  font-size: 2--spx;
+  background-color: var(--theme-50);
+  background-blend-mode: multiply;
+  color: black;
+  width: 3--spx;
+  height: 3--spx;
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 0.5--spx;
+  display: inline-block;
+}
+
+.cardHeader {
+  margin: 1--spx 1--spx 0.5--spx;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.25--spx;
+}
+
+.cardSubtitle {
+  margin: 0;
+}
+
+.cardContent {
+  margin: 1--spx;
+}
+
+.cardText {
+  text-align: start;
+  margin: 1--spx;
+}
+
+.cardGitIcon {
+  margin-right: 10px;
+}
+
+i[class*=" fi-brands-"]:before {
+  display: inline-block;
+  transform: translate(0px, 3px);
+  position: relative;
+}
+
 .cardNav {
-  --card-nav-border-color: var(--gray-80);
-  --card-nav-border-width: 2px;
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid var(--card-nav-border-color);
+  border-bottom: 2px solid var(--card-border-color);
 }
 
 .cardNavTabList {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: calc(
-    0px - var(--card-nav-border-width)
+    0px - var(--card-border-width)
   ); /* Hide bottom border of cardNav */
 }
 
 .cardNavTab {
   padding: 0.5--spx 1--spx;
-  border: var(--card-nav-border-width) solid transparent;
-  border-bottom: var(--card-nav-border-width) solid var(--card-nav-border-color);
+  border: var(--card-border-width) solid transparent;
+  border-bottom: var(--card-border-width) solid var(--card-border-color);
   border-radius: 0.5--spx 0.5--spx 0 0;
   background-color: var(--theme-50);
   background-clip: padding-box;
@@ -26,12 +97,12 @@
 }
 
 .cardNavTab:hover {
-  border-color: var(--card-nav-border-color);
+  border-color: var(--card-border-color);
 }
 
 .cardNavTab.cardNavTabActive {
-  border-color: var(--card-nav-border-color);
-  border-bottom: var(--card-nav-border-width) solid var(--gray-100);
+  border-color: var(--card-border-color);
+  border-bottom: var(--card-border-width) solid var(--gray-100);
   background-color: var(--gray-100);
   color: var(--gray-0);
 }
