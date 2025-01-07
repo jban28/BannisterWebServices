@@ -1,4 +1,5 @@
-import Button from "react-bootstrap/Button";
+import Button from "../../components/Button/Button.jsx";
+import { Link } from "react-router-dom";
 import "./NoPage.css";
 
 const NoPage = () => {
@@ -10,7 +11,9 @@ const NoPage = () => {
           <p>
             Page not found on this server. Please check the URL and start again
           </p>
-          <Button href="/">Return to Homepage</Button>
+          <Button as={Link} to="/">
+            Return to Homepage
+          </Button>
         </div>
       </div>
     </div>
