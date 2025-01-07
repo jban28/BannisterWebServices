@@ -1,4 +1,17 @@
-.contact-form__spinner {
+.formGroup {
+  text-align: left;
+  margin-bottom: 2--spx;
+}
+
+.formInput {
+  display: block;
+  width: 100%;
+  border: 2px solid var(--gray-80);
+  border-radius: 0.5--spx;
+  padding: 0.5--spx 1--spx;
+}
+
+.formSubmitSpinner {
   border: 0.2em solid var(--gray-100);
   border-top: 0.2em solid var(--gray-60);
   border-radius: 50%;
@@ -10,17 +23,11 @@
   vertical-align: text-top;
 }
 
-.contact-form__fail-message {
-  color: red;
+.formFailMessage {
   margin-bottom: 1--spx;
 }
 
-.contact-form__form-group {
-  text-align: left;
-  margin-bottom: 2--spx;
-}
-
-.contact-form__confirmation-text {
+.formConfirmMessage {
   margin-inline: auto;
   max-width: 752px;
   font-size: large;
