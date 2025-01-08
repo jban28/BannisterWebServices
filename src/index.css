@@ -2,6 +2,12 @@
 @import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
 @import "./colors.css";
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 :root {
   --bs-emphasis-color-rgb: var(--gray-100);
   --bs-link-color: var(--gray-100);
@@ -13,8 +19,6 @@
 
 body {
   color: var(--gray-100);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   background-color: var(--gray-10); /*Fallback*/
   background-image: url("/background.png");
   background-attachment: fixed;
@@ -23,16 +27,57 @@ body {
   text-align: center;
   min-width: min-content;
   line-height: 1.5;
+  margin: 0;
 }
 
-h2 {
-  font-size: 1.25rem;
-}
-
-h3 {
+body,
+input,
+label,
+textarea,
+button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 1rem;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: normal;
 }
 
 ul {
   text-align: left;
+}
+
+p {
+  margin-top: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+a {
+  color: hsl(221, 100%, 50%);
+}
+
+a:hover {
+  color: hsl(221, 100%, 40%);
+}
+
+a:active {
+  color: hsl(221, 100%, 30%);
 }

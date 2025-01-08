@@ -94,6 +94,8 @@ i[class*=" fi-brands-"]:before {
   background-clip: padding-box;
   color: var(--gray-100);
   transition: all 0.2s;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .cardNavTab:hover {

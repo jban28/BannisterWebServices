@@ -52,7 +52,11 @@ const ProjectCard = (props) => {
 
       <header className={styles.cardHeader}>
         <h1 className={styles.cardTitle}>
-          {props.data.link ? <Link>{props.data.title}</Link> : props.data.title}
+          {props.data.link ? (
+            <Link to={props.data.link}>{props.data.title}</Link>
+          ) : (
+            props.data.title
+          )}
         </h1>
         <p className={styles.cardSubtitle}>{props.data.subtitle}</p>
       </header>

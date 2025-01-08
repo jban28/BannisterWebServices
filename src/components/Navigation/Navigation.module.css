@@ -20,6 +20,8 @@
   padding: 0.5--spx;
 }
 
-.navLink.active {
+.navLink.active,
+.navLink:hover {
+  color: inherit;
   border-bottom: 0.2--spx solid var(--gray-100);
 }

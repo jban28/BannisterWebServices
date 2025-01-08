@@ -10,7 +10,7 @@
 .welcome-box__message {
   text-align: left;
   /* perspective: 1000px; */
-  margin: none;
+  margin: 0;
 }
 
 .welcome-box__message--highlight {

@@ -1,5 +1,4 @@
 // CSS import order matters - want to apply custom css and component css after bs css
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 import { StrictMode, useEffect } from "react";
 import ReactDOM from "react-dom/client";
