@@ -24,4 +24,7 @@
   --gray-80: hsl(var(--gray-hue), var(--gray-sat), 80%);
   --gray-90: hsl(var(--gray-hue), var(--gray-sat), 90%);
   --gray-100: hsl(var(--gray-hue), var(--gray-sat), 100%);
+
+  --link-hue: 221;
+  --link-sat: 100%;
 }
