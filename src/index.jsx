@@ -1,4 +1,4 @@
-// CSS import order matters - want to apply custom css and component css after bs css
+// CSS import order matters
 import "normalize.css";
 import "./index.css";
 import { StrictMode, useEffect } from "react";

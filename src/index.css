@@ -9,15 +9,13 @@
 }
 
 :root {
-  --bs-emphasis-color-rgb: var(--gray-100);
-  --bs-link-color: var(--gray-100);
-  --bs-link-hover-color: var(--gray-100);
-
   /* Custom Units */
   --spx: 12px; /* Spacing pixel - used for margins and padding */
 }
 
 body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: var(--gray-100);
   background-color: var(--gray-10); /*Fallback*/
   background-image: url("/background.png");
@@ -27,17 +25,6 @@ body {
   text-align: center;
   min-width: min-content;
   line-height: 1.5;
-  margin: 0;
-}
-
-body,
-input,
-label,
-textarea,
-button {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 1rem;
 }
 
 img,
