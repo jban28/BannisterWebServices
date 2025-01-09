@@ -2,6 +2,35 @@ import Button from "../Button/Button.jsx";
 import { useState } from "react";
 import styles from "./ProjectCard.module.css";
 import { Link } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3Alt,
+  faSquareJs,
+  faVuejs,
+  faReact,
+  faPython,
+  faPhp,
+  faBootstrap,
+  faSass,
+  faGithub,
+  faAws,
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+  faHtml5,
+  faCss3Alt,
+  faSquareJs,
+  faVuejs,
+  faReact,
+  faPython,
+  faPhp,
+  faBootstrap,
+  faSass,
+  faGithub,
+  faAws,
+);
 
 const CardNavTab = ({ children, tab, activeTab, setActiveTab }) => {
   const active = tab === activeTab;
@@ -46,7 +75,11 @@ const ProjectCard = (props) => {
       />
       <div className={styles.cardOverlay}>
         {props.data.technologyLogos?.map((logo, index) => (
-          <i key={index} className={`${styles.cardIcon} ${logo}`}></i>
+          <FontAwesomeIcon
+            key={index}
+            icon={logo}
+            className={`${styles.cardIcon}`}
+          ></FontAwesomeIcon>
         ))}
       </div>
 
