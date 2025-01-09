@@ -5,16 +5,6 @@
   margin-bottom: 4--spx;
 }
 
-.brandBar {
-  max-width: 752px;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2--spx;
-  font-size: 3--spx;
-}
-
 .container {
   padding: 4--spx;
 }
@@ -31,4 +21,47 @@
 .pageWidth {
   max-width: 752px;
   margin-inline: auto;
+}
+
+.brandBar {
+  max-width: 752px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2--spx;
+  font-size: 3--spx;
+}
+
+.brandIcon:hover {
+  scale: 1.2;
+}
+
+.brandIconTooltip {
+  color: var(--gray-0);
+  background-color: var(--gray-100);
+  visibility: hidden;
+  position: absolute;
+  font-size: small;
+  top: 120%;
+  left: 50%;
+  margin-left: -43px;
+  padding: 0.5--spx;
+  border-radius: 3px;
+  width: 86px;
+}
+
+.brandIconTooltip::before {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--gray-100) transparent;
+}
+
+.brandIcon:hover ~ .brandIconTooltip {
+  visibility: visible;
 }

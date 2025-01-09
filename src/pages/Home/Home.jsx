@@ -1,9 +1,33 @@
 import Button from "../../components/Button/Button.jsx";
-import BrandIcon from "../../components/BrandIcon/BrandIcon.jsx";
 import ContactForm from "../../components/ContactForm/ContactForm.jsx";
 import styles from "./Home.module.css";
-import arrBrands from "../../config/brands.json";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3Alt,
+  faSquareJs,
+  faVuejs,
+  faReact,
+  faPython,
+  faPhp,
+  faBootstrap,
+  faSass,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+
+const arrBrands = [
+  { id: "html5", label: "HTML 5", icon: faHtml5 },
+  { id: "css3-alt", label: "CSS 3", icon: faCss3Alt },
+  { id: "square-js", label: "JavaScript", icon: faSquareJs },
+  { id: "vuejs", label: "Vue JS", icon: faVuejs },
+  { id: "react", label: "React JS", icon: faReact },
+  { id: "python", label: "Python", icon: faPython },
+  { id: "php", label: "PHP", icon: faPhp },
+  { id: "bootstrap", label: "Bootstrap", icon: faBootstrap },
+  { id: "sass", label: "SASS", icon: faSass },
+  { id: "github", label: "GitHub", icon: faGithub },
+];
 
 const Home = () => {
   return (
@@ -23,8 +47,11 @@ const Home = () => {
 
       <div className={`${styles.container} ${styles.containerTheme}`}>
         <div className={styles.brandBar}>
-          {arrBrands.map(({ id, label }) => (
-            <BrandIcon key={id} id={id} label={label} />
+          {arrBrands.map(({ id, label, icon }) => (
+            <span key={id} style={{ position: "relative" }}>
+              <FontAwesomeIcon className={styles.brandIcon} icon={icon} />
+              <span className={styles.brandIconTooltip}>{label}</span>
+            </span>
           ))}
         </div>
       </div>
