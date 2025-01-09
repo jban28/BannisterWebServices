@@ -2,7 +2,7 @@ import { generateClient } from "aws-amplify/data";
 import { useState, useEffect } from "react";
 import PostCard from "../../components/PostCard/PostCard.jsx";
 import BlogFilter from "../../components/BlogFilter/BlogFilter.jsx";
-import "./BlogHome.css";
+import styles from "./BlogHome.module.css";
 
 const client = generateClient();
 
@@ -53,10 +53,10 @@ const BlogHome = () => {
   }, [categories]);
   return (
     <>
-      <div className="blog-home__intro">
-        <div className="blog-home__max-width">
-          <h1>Welcome to the BWS Blog!</h1>
-          <p className="blog-home__intro-text">
+      <div className={styles.blogIntro}>
+        <div className={styles.pageWidth}>
+          <h1 className={styles.blogTitle}>Welcome to the BWS Blog!</h1>
+          <p className={styles.blogIntroText}>
             I set this blog up intially whilst experimenting with Wordpress
             (though it is now set up with a serverless backend to reduce hosting
             costs). It still exists mainly for me to learn how to set up a
@@ -70,16 +70,16 @@ const BlogHome = () => {
           </p>
         </div>
       </div>
-      <div className="blog-home__filter">
+      <div>
         <BlogFilter
-          className="blog-home__max-width"
+          className={styles.pageWidth}
           categories={categories}
           setCategories={setCategories}
         />
       </div>
 
-      <div className="blog-home__post-list">
-        <div className="blog-home__max-width">
+      <div className={styles.blogPostList}>
+        <div className={styles.pageWidth}>
           {isLoaded &&
             posts.length > 0 &&
             posts.map((post) => (

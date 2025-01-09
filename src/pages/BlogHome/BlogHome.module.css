@@ -1,18 +1,22 @@
-.blog-home__intro {
+.blogTitle {
+  margin: 0 0 0.5--spx;
+}
+
+.blogIntro {
   background-color: var(--gray-100);
   color: var(--gray-0);
   padding: 2--spx;
 }
 
-.blog-home__max-width {
+.pageWidth {
   max-width: 752px;
   margin-inline: auto;
 }
 
-.blog-home__intro-text {
+.blogIntroText {
   margin-bottom: 0px;
 }
 
-.blog-home__post-list {
+.blogPostList {
   margin-bottom: 2--spx;
 }
