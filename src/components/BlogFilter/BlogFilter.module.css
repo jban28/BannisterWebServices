@@ -1,0 +1,47 @@
+.blogFilter {
+  padding-inline: 2--spx;
+  margin-block: 2--spx;
+  text-align: start;
+}
+
+.categoryInput {
+  margin: 1--spx 2--spx;
+  padding: 1--spx;
+  display: block;
+  border-radius: 0.5--spx;
+  background-color: var(--gray-100);
+  color: var(--gray-0);
+  user-select: none;
+  text-align: start;
+  transition: all 0.1s;
+}
+
+.categoryInput:hover {
+  background-color: var(--gray-90);
+}
+
+.categoryInput:active {
+  background-color: var(--gray-80);
+}
+
+.categoryInputChecked {
+  color: var(--gray-100);
+  background-color: var(--theme-50);
+}
+
+.categoryInputChecked:hover {
+  background-color: var(--theme-40);
+}
+
+.categoryInputChecked:active {
+  background-color: var(--theme-30);
+}
+
+.categoryInputName {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.categoryInputCheckbox {
+  margin-inline-end: 1ch;
+}

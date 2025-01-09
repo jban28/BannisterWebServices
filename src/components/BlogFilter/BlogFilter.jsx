@@ -1,15 +1,15 @@
 import { useRef } from "react";
-import "./BlogFilter.css";
+import styles from "./BlogFilter.module.css";
 
 const CategoryInput = ({ name, desc, checked, setChecked }) => {
   const inputRef = useRef(null);
 
   return (
     <label
-      className={"category-input" + (checked ? " category-input__checked" : "")}
+      className={`${styles.categoryInput} ${checked ? styles.categoryInputChecked : ""}`}
     >
       <input
-        className="category-input--checkbox"
+        className={styles.categoryInputCheckbox}
         checked={checked}
         ref={inputRef}
         type="checkbox"
@@ -17,7 +17,7 @@ const CategoryInput = ({ name, desc, checked, setChecked }) => {
           setChecked(e.target.checked);
         }}
       />
-      <dfn className="category-input--name">{name}</dfn>
+      <dfn className={styles.categoryInputName}>{name}</dfn>
       :&nbsp;
       {desc}
     </label>
@@ -26,7 +26,7 @@ const CategoryInput = ({ name, desc, checked, setChecked }) => {
 
 const BlogFilter = ({ className, categories, setCategories }) => {
   return (
-    <details className={`blog-filter ${className}`}>
+    <details className={`${styles.blogFilter} ${className}`}>
       <summary>Filter by category</summary>
       {Object.entries(categories).map(([key, categoryProps]) => {
         const setChecked = (newValue) => {
