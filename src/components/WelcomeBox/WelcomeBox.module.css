@@ -1,4 +1,4 @@
-.welcome-box__container {
+.container {
   padding: 2--spx 3--spx;
   margin: auto;
   width: min-content;
@@ -7,13 +7,13 @@
   align-items: center;
 }
 
-.welcome-box__message {
+.message {
   text-align: left;
   /* perspective: 1000px; */
   margin: 0;
 }
 
-.welcome-box__message--highlight {
+.messageHighlight {
   background-color: var(--theme-50);
   padding: 0.5--spx 1--spx;
   margin-block: 0.5--spx;
@@ -24,17 +24,17 @@
   font-size: 1.5em;
 }
 
-.welcome-box__message--highlight::first-letter {
+.messageHighlight::first-letter {
   color: var(--gray-0);
 }
 
-.welcome-box__message--highlight.show {
+.messageHighlight.show {
   animation: flip-in 0.5s;
   transform-style: preserve-3d;
   transform: rotateX(0deg);
 }
 
-.welcome-box__message--highlight.wait {
+.messageHighlight.wait {
   transform: rotateX(90deg);
 }
 

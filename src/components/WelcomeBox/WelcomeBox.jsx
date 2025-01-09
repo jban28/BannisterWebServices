@@ -1,4 +1,4 @@
-import "./WelcomeBox.css";
+import styles from "./WelcomeBox.module.css";
 import { useState, useEffect } from "react";
 
 const WelcomeBox = () => {
@@ -11,30 +11,30 @@ const WelcomeBox = () => {
   }, []);
 
   return (
-    <div className="welcome-box__container">
-      <h1 className="welcome-box__message">
+    <div className={styles.container}>
+      <h1 className={styles.message}>
         {fontReady ? "Welcome to" : "\u200b"}
         <br />
         <span
-          className={
-            (fontReady ? "show" : "wait") + " welcome-box__message--highlight"
-          }
+          className={`
+            ${fontReady ? styles.show : styles.wait} ${styles.messageHighlight}
+          `}
         >
           Bannister
         </span>
         <br />
         <span
-          className={
-            (fontReady ? "show" : "wait") + " welcome-box__message--highlight"
-          }
+          className={`
+            ${fontReady ? styles.show : styles.wait} ${styles.messageHighlight}
+          `}
         >
           Web
         </span>
         <br />
         <span
-          className={
-            (fontReady ? "show" : "wait") + " welcome-box__message--highlight"
-          }
+          className={`
+            ${fontReady ? styles.show : styles.wait} ${styles.messageHighlight}
+          `}
         >
           Services
         </span>
