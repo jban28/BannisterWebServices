@@ -21,7 +21,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "npx eslint ./src ./amplify",
-    "print": "npx prettier ./src -w"
+    "print": "npx prettier ./src -w",
+    "test": "npx cypress run --component --browser=chrome"
   },
   "postcss": {
     "map": false,
