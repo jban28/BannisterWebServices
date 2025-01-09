@@ -1,11 +1,11 @@
-.homepage__intro {
+.intro {
   margin-inline: auto;
   max-width: 752px;
   font-size: large;
   margin-bottom: 4--spx;
 }
 
-.homepage__brand-bar {
+.brandBar {
   max-width: 752px;
   margin-inline: auto;
   display: flex;
@@ -15,20 +15,20 @@
   font-size: 3--spx;
 }
 
-.homepage__container {
+.container {
   padding: 4--spx;
 }
 
-.homepage__container--white {
+.containerWhite {
   background-color: var(--gray-100);
   color: var(--gray-0);
 }
 
-.homepage__container--theme {
+.containerTheme {
   background-color: var(--theme-50);
 }
 
-.homepage__max-width {
+.pageWidth {
   max-width: 752px;
   margin-inline: auto;
 }
