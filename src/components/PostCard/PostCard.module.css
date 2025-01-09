@@ -1,4 +1,4 @@
-.post-card {
+.card {
   max-width: 752px;
   margin: 2--spx;
   padding: 2--spx;
@@ -8,15 +8,15 @@
   text-align: left;
 }
 
-.post-card__link {
+.link {
   text-decoration: none;
   color: var(--gray-0);
 }
 
-.post-card__title:hover {
+.title:hover {
   text-decoration: underline;
 }
 
-.post-card__summary {
+.summary {
   margin-top: 1--spx;
 }

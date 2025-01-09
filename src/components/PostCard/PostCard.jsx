@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import PostData from "../PostData/PostData";
-import "./PostCard.css";
+import styles from "./PostCard.module.css";
 
 const PostCard = ({ id, title, date, summary, category, arrTags }) => {
   return (
-    <div className="post-card">
-      <Link to={id} className="post-card__link">
-        <h1 className="post-card__title">{title}</h1>
+    <div className={styles.card}>
+      <Link to={id} className={styles.link}>
+        <h1 className={styles.title}>{title}</h1>
       </Link>
       <PostData date={date} category={category} arrTags={arrTags} />
 
-      <Link to={id} className="post-card__link">
-        <div className="post-card__summary">{summary}</div>
+      <Link to={id} className={styles.link}>
+        <div className={styles.summary}>{summary}</div>
       </Link>
     </div>
   );
