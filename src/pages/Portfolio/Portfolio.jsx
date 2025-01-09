@@ -1,11 +1,11 @@
 import ProjectCard from "../../components/ProjectCard/ProjectCard.jsx";
 import arrProjectData from "../../config/projects.json";
-import "./Portfolio.css";
+import styles from "./Portfolio.module.css";
 
 const Portfolio = () => {
   return (
     <>
-      <div className="portfolio">
+      <div className={styles.portfolio}>
         {arrProjectData.map((projectData) => (
           <ProjectCard key={projectData.id} data={projectData}></ProjectCard>
         ))}
