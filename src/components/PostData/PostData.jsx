@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-regular-svg-icons";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 import TextLoader from "../../components/TextLoader/TextLoader.jsx";
 import "./PostData.css";
 
@@ -9,13 +12,13 @@ const PostData = ({ date, category, arrTags }) => {
       </div>
       <div className="post-data__date post-data__details">
         <time dateTime={date}>
-          <i className="post-data__icon fa-regular fa-calendar"></i>
+          <FontAwesomeIcon className="post-data__icon" icon={faCalendar} />
           {date || <TextLoader />}
         </time>
       </div>
 
       <div className="post-data__tag-list post-data__details">
-        <i className="post-data__icon fa-solid fa-tag"></i>
+        <FontAwesomeIcon className="post-data__icon" icon={faTag} />
         {(arrTags &&
           arrTags.map((tag, index) => (
             <span key={tag} className="post-data__tag">
