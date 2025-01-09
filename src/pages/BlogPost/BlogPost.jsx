@@ -5,7 +5,7 @@ import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import PostData from "../../components/PostData/PostData.jsx";
 import TextLoader from "../../components/TextLoader/TextLoader.jsx";
-import "./BlogPost.css";
+import styles from "./BlogPost.module.css";
 import "highlight.js/styles/github.css";
 
 const client = generateClient();
@@ -42,10 +42,8 @@ const BlogPost = () => {
   return (
     <>
       {!noPost ? (
-        <article className="blog-post__post">
-          <h1 className="blog-post__title">
-            {postData.title || <TextLoader />}
-          </h1>
+        <article className={styles.post}>
+          <h1>{postData.title || <TextLoader />}</h1>
           <PostData
             date={postData.lastRevised}
             category={postData.category}
@@ -53,13 +51,13 @@ const BlogPost = () => {
           />
           <Markdown
             rehypePlugins={[rehypeHighlight]}
-            className="blog-post__content"
+            className={styles.content}
           >
             {postData.content}
           </Markdown>
         </article>
       ) : (
-        <div className="blog-post__error">Post not found</div>
+        <div className={styles.error}>Post not found</div>
       )}
     </>
   );

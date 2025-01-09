@@ -1,4 +1,4 @@
-.blog-post__post {
+.post {
   background-color: var(--gray-100);
   color: var(--gray-0);
   padding: 2--spx;
@@ -7,21 +7,21 @@
   min-height: 100%;
 }
 
-.blog-post__content {
+.content {
   margin-top: 2--spx;
 }
 
-.blog-post__content code {
+.content code {
   background-color: var(--gray-80);
 }
 
-.blog-post__error {
+.error {
   padding: 2--spx;
   min-height: 100%;
 }
 
 @media screen and (min-width: 800px) {
-  .blog-post__post {
+  .post {
     max-width: 752px;
   }
 }
