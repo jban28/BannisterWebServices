@@ -92,7 +92,7 @@ const ContactForm = ({ className = "", style = {} }) => {
       action={handleSubmit}
       acceptCharset="utf-8"
     >
-      <h1>Contact me</h1>
+      <h1 className={styles.formTitle}>Contact me</h1>
       <fieldset disabled={status === "sending"}>
         <div className={styles.formGroup}>
           <label htmlFor="name">Name</label>

@@ -1,3 +1,7 @@
+.formTitle {
+  margin: 0 0 0.5--spx;
+}
+
 .formGroup {
   text-align: left;
   margin-bottom: 2--spx;
